@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  --surface: #241f51;
+  --surface-foreground: #f9f9f9;
+  --foreground: #f9f9f9;
+  --card: #302968;
+  --card-foreground: #f9f9f9;
+  --panel: #f9f9f9;
+  --panel-foreground: #241f51;
+  --accent: #ff8c61;
+  --accent-strong: #ff6b35;
+  --accent-foreground: #241f51;
+  --whatsapp: #25d366;
+  --whatsapp-strong: #1fbd5a;
+  --whatsapp-foreground: #ffffff;
+  --muted: #d6d0ef;
+  --muted-dark: #6a628f;
+  --border: rgba(249, 249, 249, 0.16);
+  --border-dark: rgba(36, 31, 81, 0.16);
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-panel: var(--panel);
+  --color-panel-foreground: var(--panel-foreground);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-strong: var(--whatsapp-strong);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --color-muted: var(--muted);
+  --color-muted-dark: var(--muted-dark);
+  --color-border: var(--border);
+  --color-border-dark: var(--border-dark);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+.light,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --surface: #f9f9f9;
+  --surface-foreground: #241f51;
+  --foreground: #241f51;
+  --card: #ffffff;
+  --card-foreground: #241f51;
+  --panel: #241f51;
+  --panel-foreground: #f9f9f9;
+  --accent: #ff6b35;
+  --accent-strong: #ff6b35;
+  --accent-foreground: #ffffff;
+  --whatsapp: #25d366;
+  --whatsapp-strong: #1fbd5a;
+  --whatsapp-foreground: #ffffff;
+  --muted: #5c5877;
+  --muted-dark: #c9c5df;
+  --border: rgba(36, 31, 81, 0.16);
+  --border-dark: rgba(249, 249, 249, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
