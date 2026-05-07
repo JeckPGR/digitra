@@ -25,8 +25,8 @@ export const siteCopy = {
       menuTitle: "Menu",
       contactTitle: "Kontak",
       contactDescription:
-        "Konsultasikan kebutuhan website, GAS automation, atau desain visual bisnis.",
-      contactCta: "Chat Sekarang",
+        "Digitalisasikan bisnis Anda. Konsultasikan kebutuhan otomasi, website, hingga identitas visual brand Anda bersama kami.",
+      contactCta: "Mulai Konsultasi Gratis",
       copyright: "All rights reserved.",
     },
     theme: {
@@ -44,16 +44,16 @@ export const siteCopy = {
       newBriefTopic: "brief proyek baru",
       startProjectLabel: "Start project on WhatsApp",
       chatUs: "Chat Us",
-      chatWhatsApp: "Chat WhatsApp",
+      chatWhatsApp: "Hubungi Kami",
       packageWebsite: "WhatsApp Paket Website",
       customGas: "Custom GAS",
       askPackage: "Tanya Paket",
       consultViaWhatsApp: "Konsultasi via WhatsApp",
-      openWhatsApp: "Buka WhatsApp",
+      openWhatsApp: "Hubungi via WhatsApp",
     },
     serviceHighlights: [
       {
-        title: "GAS Web Business Developer",
+        title: "GAS Web Business Application",
         href: "/services#gas",
         eyebrow: "Automation",
         summary:
@@ -85,8 +85,8 @@ export const siteCopy = {
         secondaryCta: "Lihat Layanan",
       },
       heroStats: [
-        { value: "1+", label: "Tahun Pengalaman" },
-        { value: "5+", label: "Proyek Selesai" },
+        { value: "3+", label: "Tahun Pengalaman" },
+        { value: "12+", label: "Proyek Selesai" },
         { value: "100%", label: "Tepat Waktu" },
         { value: "24/7", label: "VIP Support" },
       ],
@@ -113,7 +113,7 @@ export const siteCopy = {
       serviceSection: {
         eyebrow: "Layanan Kami",
         title: "Kami bantu bagian digital yang paling berdampak.",
-        exploreCta: "Lihat Layanan",
+        exploreCta: "Pelajari Lebih Lanjut",
         chips: [
           "Landing Page",
           "Company Profile",
@@ -126,7 +126,7 @@ export const siteCopy = {
       },
       testimonials: {
         eyebrow: "Testimoni",
-        title: "Customer is our top priority",
+        title: "Apa yang dikatakan pelanggan kami",
         items: [
           {
             quote:
@@ -151,7 +151,7 @@ export const siteCopy = {
       faq: {
         eyebrow: "FAQ",
         title: "Sebelum kita mulai",
-        cta: "Chat WhatsApp",
+        cta: "Hubungi Kami ",
       },
       closing: {
         title: "Kata jelas. Visual kuat. Trust meningkat.",
@@ -255,7 +255,7 @@ export const siteCopy = {
       },
       gas: {
         eyebrow: "01 / GAS",
-        title: "GAS Web Business Developer",
+        title: "GAS Web Business Application",
         description:
           "Sistem berbasis Google Apps Script untuk workflow, laporan, dashboard, approval, dan proses operasional yang sering berulang.",
         learnMore: "Pelajari lebih detail",
@@ -321,14 +321,6 @@ export const siteCopy = {
                 "Struktur halaman lebih lengkap",
                 "Menjelaskan profil, layanan, dan trust",
                 "Cocok untuk bisnis yang butuh kredibilitas",
-              ],
-            },
-            {
-              title: "Siap dikembangkan",
-              items: [
-                "Section bisa ditambah sesuai scope",
-                "Layout responsive dari awal",
-                "Ruang untuk gambar, portfolio, dan testimoni",
               ],
             },
           ],
@@ -422,7 +414,7 @@ export const siteCopy = {
         title: "Ceritakan kebutuhan bisnis Anda berikutnya.",
         description:
           "Ceritakan kebutuhan website, automation, atau desain visual. Digitra akan bantu merapikan brief menjadi scope kerja yang jelas dan mudah dieksekusi.",
-        primaryCta: "Chat WhatsApp",
+        primaryCta: "Hubungi Kami ",
         secondaryCta: "Email Digitra",
         topic: "konsultasi proyek digital",
       },
@@ -498,8 +490,8 @@ export const siteCopy = {
       menuTitle: "Menu",
       contactTitle: "Contact",
       contactDescription:
-        "Talk to us about your website, GAS automation, or business visual design needs.",
-      contactCta: "Chat Now",
+        "Digitize your business. Consult with us about your automation needs, website, and brand identity.",
+      contactCta: "Start Free Consultation",
       copyright: "All rights reserved.",
     },
     theme: {
@@ -517,7 +509,7 @@ export const siteCopy = {
       newBriefTopic: "new project brief",
       startProjectLabel: "Start project on WhatsApp",
       chatUs: "Chat Us",
-      chatWhatsApp: "Chat WhatsApp",
+      chatWhatsApp: "Hubungi Kami ",
       packageWebsite: "WhatsApp Website Package",
       customGas: "Custom GAS",
       askPackage: "Ask Package",
@@ -526,7 +518,7 @@ export const siteCopy = {
     },
     serviceHighlights: [
       {
-        title: "GAS Web Business Developer",
+        title: "GAS Web Business Application",
         href: "/services#gas",
         eyebrow: "Automation",
         summary:
@@ -599,7 +591,7 @@ export const siteCopy = {
       },
       testimonials: {
         eyebrow: "Testimonials",
-        title: "Customer is our top priority",
+        title: "What our customers say",
         items: [
           {
             quote:
@@ -624,7 +616,7 @@ export const siteCopy = {
       faq: {
         eyebrow: "FAQ",
         title: "Before we start",
-        cta: "Chat WhatsApp",
+        cta: "Hubungi Kami ",
       },
       closing: {
         title: "Clear words. Strong visuals. Better trust.",
@@ -728,7 +720,7 @@ export const siteCopy = {
       },
       gas: {
         eyebrow: "01 / GAS",
-        title: "GAS Web Business Developer",
+        title: "GAS Web Business Application",
         description:
           "Google Apps Script based systems for workflows, reports, dashboards, approvals, and recurring operational processes.",
         learnMore: "Learn more details",
@@ -895,7 +887,7 @@ export const siteCopy = {
         title: "Tell us what your business needs next.",
         description:
           "Tell us about your website, automation, or visual design needs. Digitra will help turn the brief into a clear and executable scope of work.",
-        primaryCta: "Chat WhatsApp",
+        primaryCta: "Hubungi Kami ",
         secondaryCta: "Email Digitra",
         topic: "digital project consultation",
       },

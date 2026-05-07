@@ -28,9 +28,9 @@ export function AppShell({ children }: { children: ReactNode }) {
           <Link href="/" aria-label="Digitra home">
             <DigitraLogo {...logoSize.mobile} priority />
           </Link>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 rounded-full border border-border bg-card/70 p-1">
             <LanguageSwitcher compact />
-            <ThemeSwitcher />
+            <ThemeSwitcher compact />
           </div>
         </div>
       </header>
@@ -72,7 +72,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         {whatsapp.chatUs}
       </a>
 
-      <footer className="bg-surface pb-10 pt-20 text-surface-foreground sm:px-8 lg:px-10">
+      <footer className="bg-surface pb-10 pt-10 text-surface-foreground sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-lg bg-card p-8 sm:p-10">
             <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">

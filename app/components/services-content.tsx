@@ -38,16 +38,6 @@ export function ServicesContent() {
             <p className="text-base leading-8 text-muted sm:text-lg">
               {servicesPage.hero.description}
             </p>
-            {/* <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              {servicesPage.hero.chips.map((item) => (
-                <span
-                  className="rounded-full bg-surface px-4 py-2 text-center text-sm font-semibold text-accent"
-                  key={item}
-                >
-                  {item}
-                </span>
-              ))}
-            </div> */}
           </div>
         </div>
       </section>

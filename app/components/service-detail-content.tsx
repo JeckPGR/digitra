@@ -56,7 +56,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
 
   return (
     <main className="page-transition flex-1 bg-surface text-surface-foreground">
-      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-24">
+      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-10 lg:px-10 lg:py-24">
         <PageDecor tone={isGas ? "process" : "services"} />
         <div className="relative mx-auto max-w-7xl">
           <Link
@@ -117,7 +117,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
             {detail.groups.map((group) => (
               <article
                 className="rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground"
@@ -158,49 +158,6 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
                   <p className="text-xl font-semibold">{item.title}</p>
                   <p className="mt-4 text-sm leading-7 text-muted">
                     {"description" in item ? item.description : item.summary}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-10 rounded-lg border border-border bg-card p-6 sm:p-8">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-base font-semibold text-accent">
-                  {labels.packageTitle}
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold">
-                  {isGas ? detail.groups[2].title : service.title}
-                </h2>
-              </div>
-              <WhatsAppCta
-                className="h-11 px-5"
-                href={whatsappLink(service.title, language)}
-              >
-                {labels.cta}
-              </WhatsAppCta>
-            </div>
-            <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {packages.slice(0, 4).map((item, index) => (
-                <article
-                  className="rounded-lg border border-border bg-surface p-5"
-                  key={
-                    "name" in item
-                      ? `${item.label}-${item.name}-${index}`
-                      : item.title
-                  }
-                >
-                  <p className="font-semibold">
-                    {"name" in item ? item.name : item.title}
-                  </p>
-                  <p className="mt-2 text-sm font-semibold text-accent">
-                    {"price" in item ? item.price : whatsapp.customGas}
-                  </p>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    {"description" in item
-                      ? item.description
-                      : item.features.slice(0, 3).join(", ")}
                   </p>
                 </article>
               ))}
