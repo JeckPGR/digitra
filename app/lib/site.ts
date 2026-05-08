@@ -14,7 +14,7 @@ export const siteConfig = {
   name: "Digitra",
   fullName: "Digitra Digital Transformation",
   founded: "2025",
-  email: "hello@digitra.id",
+  email: "digitraofficialid@gmail.com",
   whatsappNumber: "6285177896515",
 };
 
@@ -77,8 +77,8 @@ export const siteCopy = {
     home: {
       hero: {
         eyebrow: "Digital Transformation Studio",
-        titlePrefix: "Membawa Bisnis Anda Menuju",
-        titleAccent: "Evolusi Digital",
+        titlePrefix: "Membawa Bisnis Anda Tumbuh di",
+        titleAccent: "Era Digital",
         description:
           "Digitra merancang website, automation, dan visual brand yang membuat bisnis terlihat lebih terpercaya dan lebih mudah dijelaskan.",
         primaryCta: "Mulai Sekarang",
@@ -461,7 +461,7 @@ export const siteCopy = {
           "Durasi baru dihitung sejak seluruh materi dasar(seperti logo resolusi tinggi, foto produk/layanan, dan informasi detail kontak) dari klien sudah lengkap dan diterima tim Digitra.",
       },
       {
-        question: "Apakah saya harus menyiapkan semua teks, atau Digitra bisa membantu copywriting??",
+        question: "Apakah saya harus menyiapkan semua teks dalam bentuk copywriting , atau Digitra bisa membantu copywriting?",
         answer:
           "Jika Anda memilih Paket Intermediate (Landing Page maupun Company Profile), tim kami akan menangani copywriting profesional. Anda cukup mengirimkan bullet points atau ide kasarnya, dan kami yang akan memolesnya menjadi bahasa bisnis yang elegan. Untuk Paket Starter, materi teks 100% disiapkan oleh klien",
       },
@@ -929,19 +929,29 @@ export const siteCopy = {
     },
     faqs: [
       {
-        question: "Can Digitra help with copywriting?",
+        question: "When does the project timeline begin?",
         answer:
-          "Yes. Copywriting is included in selected packages, especially the Intermediate Landing Page and Intermediate Company Profile packages.",
+          "The timeline begins once all the necessary materials (such as high-resolution logos, product/service photos, and detailed contact information) from the client have been provided and received by the Digitra team.",
       },
       {
-        question: "When does the delivery timeline start?",
+        question: "Do I have to prepare all the text in copywriting form, or can Digitra help with copywriting?",
         answer:
-          "The timeline starts once all basic materials from the client are complete and received by the Digitra team.",
+          "If you choose the Intermediate Package (Landing Page or Company Profile), our team will handle the professional copywriting. All you need to do is send us bullet points or rough ideas, and we’ll polish them into elegant business language. For the Starter Package, the text content is 100% prepared by the client.",
       },
       {
-        question: "Will the website be responsive?",
+        question: "What is the revision process if the design doesn’t quite meet your expectations?",
         answer:
-          "Yes. Websites are built to look clean on mobile and desktop according to the selected package scope.",
+          "We offer a very transparent revision policy. Minor revisions apply to changes in color, font, image replacement, or minor text adjustments. Major revisions, on the other hand, apply to significant changes to the page structure or layout. The number of revisions (1 to 4) depends on the package you choose.",
+      },
+      {
+        question: "Will the website look good on mobile devices (be responsive)?",
+        answer:
+          "Absolutely. All websites developed by Digitra are guaranteed to be 100% responsive and optimized to display perfectly on smartphones, tablets, and desktops",
+      },
+      {
+        question: "Will I have control over the source code for my website?",
+        answer:
+          "Of course. To ensure transparency and full ownership of your digital assets, we will provide you with the complete source code via GitHub or a ZIP file once the project is fully completed.",
       },
     ],
   },

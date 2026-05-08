@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description:
     "Digitra adalah partner web development, company profile, landing page, automation, dan desain visual untuk evolusi digital bisnis.",
   icons: {
-    icon: "/digitra.png",
-    apple: "/digitra.png",
+    icon: "/digitra-transparent.png",
+    apple: "/digitra-transparent.png",
   },
 };
 
