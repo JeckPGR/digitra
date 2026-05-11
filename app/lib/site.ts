@@ -349,22 +349,54 @@ export const siteCopy = {
     },
     gasExamples: [
       {
-        title: "Operational Dashboard",
-        price: "Custom Quote",
+        title: "Fashion Retail POS",
         description:
-          "Dashboard ringan untuk memantau data Google Sheets, progres pekerjaan, dan status operasional harian.",
+          "Kelola transaksi retail & grosir (bulk) dan lacak seluruh siklus pesanan secara end-to-end, mulai dari proses tunggu hingga diterima pelanggan, dalam satu dashboard cerdas.",
+        button: "Tanya Detail",
       },
       {
-        title: "Approval & Form System",
-        price: "Custom Quote",
+        title: "Digital Reseller App",
         description:
-          "Alur form, validasi data, approval internal, dan notifikasi otomatis untuk proses bisnis berulang.",
+          "Sistem khusus bagi pengelola bisnis akun premium. Dilengkapi fitur loyalty card otomatis yang ter-update di setiap transaksi untuk tingkatkan retensi pembelian",
+        button: "Tanya Detail ",
       },
       {
-        title: "Reporting Automation",
-        price: "Custom Quote",
+        title: "F&B Business Management",
         description:
-          "Otomasi rekap, laporan berkala, dan distribusi data agar tim tidak perlu menyalin data manual.",
+          "Sistem POS F&B cerdas dengan sinkronisasi data real-time. Nikmati kemudahan kalkulasi HPP otomatis dan pelacakan bahan baku akurat untuk amankan profitabilitas bisnis Anda",
+        button: "Tanya Detail ",
+      },
+    ],
+    gasShowcases: [
+      {
+        title: "Fashion Retail POS",
+        image: "/GAS/BusinessFashion.png",
+      },
+      {
+        title: "Digital Reseller App",
+        image: "/GAS/BusinessAppPremium.png",
+      },
+      {
+        title: "F&B Business Management",
+        image: "/GAS/BusinessFnB.png",
+      },
+      {
+        title: "Job Application System",
+        image: "/GAS/JobApplication.png",
+      },
+    ],
+    websiteShowcases: [
+      {
+        title: "Landing Page Showcase 01",
+        image: "",
+      },
+      {
+        title: "Landing Page Showcase 02",
+        image: "",
+      },
+      {
+        title: "Landing Page Showcase 03",
+        image: "",
       },
     ],
     designPackages: [
@@ -822,22 +854,54 @@ export const siteCopy = {
     },
     gasExamples: [
       {
-        title: "Operational Dashboard",
-        price: "Custom Quote",
+        title: "Fashion Retail POS",
         description:
-          "A lightweight dashboard to monitor Google Sheets data, task progress, and daily operational status.",
+          "Manage retail and wholesale (bulk) transactions and track the entire order cycle end-to-end—from processing to customer delivery—all in one smart dashboard.",
+        button: "Consult Now",
       },
       {
-        title: "Approval & Form System",
-        price: "Custom Quote",
+        title: "Digital Reseller App",
         description:
-          "Form flows, data validation, internal approval, and automatic notifications for recurring business processes.",
+          "A specialized system for premium account business managers. Equipped with an automatic loyalty card feature that updates with every transaction to boost purchase retention",
+        button: "Consult Now",
       },
       {
-        title: "Reporting Automation",
-        price: "Custom Quote",
+        title: "F&B Business Management",
         description:
-          "Automated recaps, periodic reports, and data distribution so the team does not need to copy data manually.",
+          "A smart F&B POS system with real-time data synchronization. Enjoy the convenience of automatic cost of goods sold (COGS) calculations and accurate inventory tracking to ensure your business’s profitability",
+        button: "Consult Now",
+      },
+    ],
+    gasShowcases: [
+      {
+        title: "Fashion Retail POS",
+        image: "/GAS/BusinessFashion.png",
+      },
+      {
+        title: "Digital Reseller App",
+        image: "/GAS/BusinessAppPremium.png",
+      },
+      {
+        title: "F&B Business Management",
+        image: "/GAS/BusinessFnB.png",
+      },
+      {
+        title: "Job Application System",
+        image: "/GAS/JobApplication.png",
+      },
+    ],
+    websiteShowcases: [
+      {
+        title: "Landing Page Showcase 01",
+        image: "",
+      },
+      {
+        title: "Landing Page Showcase 02",
+        image: "",
+      },
+      {
+        title: "Landing Page Showcase 03",
+        image: "",
       },
     ],
     designPackages: [

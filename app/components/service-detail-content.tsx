@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { whatsappLink } from "../lib/site";
 import { useLanguage } from "./language-provider";
@@ -12,16 +13,30 @@ type ServiceDetailContentProps = {
   kind: DetailKind;
 };
 
+const CATEGORY_COLORS: Record<string, { badge: string; bar: string }> = {
+  Retail:   { badge: "bg-orange-500/15 text-orange-400 border-orange-500/30", bar: "bg-orange-400" },
+  Reseller: { badge: "bg-violet-500/15 text-violet-400 border-violet-500/30", bar: "bg-violet-400" },
+  "F&B":    { badge: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30", bar: "bg-emerald-400" },
+  HR:       { badge: "bg-sky-500/15 text-sky-400 border-sky-500/30", bar: "bg-sky-400" },
+  default:  { badge: "bg-accent/15 text-accent border-accent/30", bar: "bg-accent" },
+};
+
+// Assign a category label per showcase title — extend as needed
+function inferCategory(title: string): string {
+  if (/fashion|retail|pos/i.test(title)) return "Retail";
+  if (/reseller/i.test(title)) return "Reseller";
+  if (/f&b|fnb|food|resto/i.test(title)) return "F&B";
+  if (/job|hr|rekrut/i.test(title)) return "HR";
+  return "default";
+}
+
 export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
   const { copy, language } = useLanguage();
-  const { servicesPage, whatsapp } = copy;
+  const { servicesPage } = copy;
   const isGas = kind === "gas";
   const service = isGas ? servicesPage.gas : servicesPage.website;
   const detail = service.detail;
-  const examples = isGas ? copy.gasExamples : copy.serviceHighlights.slice(0, 2);
-  const packages = isGas
-    ? copy.gasExamples
-    : [...copy.landingPackages, ...copy.companyProfilePackages];
+  const showcaseItems = isGas ? copy.gasShowcases : copy.websiteShowcases;
 
   const labels =
     language === "id"
@@ -30,12 +45,13 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           overview: "Ringkasan layanan",
           media: "Area visual",
           includes: "Apa saja yang dibahas",
-          exampleTitle: isGas ? "Contoh kebutuhan GAS" : "Pilihan website",
+          exampleTitle: isGas ? "Showcase aplikasi GAS" : "Showcase website",
           packageTitle: isGas ? "Format pengerjaan" : "Paket awal",
-          ctaTitle: "Siap bahas kebutuhan detail?",
+          ctaEyebrow: "Custom System",
+          ctaTitle: "Ingin sistem custom mengikuti bisnis Anda?",
           ctaDescription:
-            "Kirim brief singkat, nanti scope bisa disesuaikan dengan workflow dan materi yang sudah tersedia.",
-          cta: "Konsultasi via WhatsApp",
+            "Kirim brief singkat — scope bisa disesuaikan penuh dengan workflow dan materi yang sudah tersedia.",
+          cta: "Hubungi Kami via WhatsApp",
           placeholderNote:
             "Area ini disiapkan untuk gambar, screenshot, mockup, atau preview workflow.",
         }
@@ -44,18 +60,21 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           overview: "Service overview",
           media: "Visual area",
           includes: "What this covers",
-          exampleTitle: isGas ? "GAS use cases" : "Website options",
+          exampleTitle: isGas ? "GAS app showcase" : "Website showcase",
           packageTitle: isGas ? "Work format" : "Starter packages",
-          ctaTitle: "Ready to discuss the details?",
+          ctaEyebrow: "Custom System",
+          ctaTitle: "Want a system custom-built for your business?",
           ctaDescription:
-            "Send a short brief and the scope can be adjusted to your workflow and available materials.",
-          cta: "Consult via WhatsApp",
+            "Send a short brief — the scope can be fully adjusted to your workflow and available materials.",
+          cta: "Contact Us via WhatsApp",
           placeholderNote:
             "This area is prepared for images, screenshots, mockups, or workflow previews.",
         };
 
   return (
     <main className="page-transition flex-1 bg-surface text-surface-foreground">
+
+      {/* ── Hero ── */}
       <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-10 lg:px-10 lg:py-24">
         <PageDecor tone={isGas ? "process" : "services"} />
         <div className="relative mx-auto max-w-7xl">
@@ -67,9 +86,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           </Link>
           <div className="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-base font-semibold text-accent">
-                {service.eyebrow}
-              </p>
+              <p className="text-base font-semibold text-accent">{service.eyebrow}</p>
               <h1 className="mt-4 text-5xl font-semibold leading-[0.96] tracking-normal sm:text-7xl">
                 {service.title}
               </h1>
@@ -78,107 +95,124 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-6 sm:p-8">
-              <p className="text-sm font-semibold text-accent">
-                {labels.overview}
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold leading-tight">
-                {detail.title}
-              </h2>
-              <p className="mt-5 text-sm leading-7 text-muted">
-                {detail.description}
-              </p>
+              <p className="text-sm font-semibold text-accent">{labels.overview}</p>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight">{detail.title}</h2>
+              <p className="mt-5 text-sm leading-7 text-muted">{detail.description}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-panel px-5 py-12 text-panel-foreground sm:px-8 sm:py-14 lg:px-10 lg:py-24">
-        <PageDecor align="right" tone={isGas ? "faq" : "hero"} />
-        <div className="relative mx-auto max-w-7xl">
-          <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
-            <div>
-              <p className="text-base font-semibold text-accent-strong">
-                {labels.media}
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-                {detail.eyebrow}
-              </h2>
-              <p className="mt-5 text-sm leading-7 text-paper-muted">
-                {labels.placeholderNote}
-              </p>
-            </div>
-            <div className="grid min-h-80 place-items-center rounded-lg border border-dashed border-border-dark bg-paper p-8 text-center text-paper-muted">
-              <div>
-                <div className="mx-auto h-24 w-40 rounded-md border border-current opacity-45" />
-                <p className="mt-5 text-sm font-semibold">
-                  {detail.imageLabel}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {detail.groups.map((group) => (
-              <article
-                className="rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground"
-                key={group.title}
-              >
-                <p className="text-lg font-semibold">{group.title}</p>
-                <ul className="mt-5 space-y-3 text-sm leading-6 text-paper-muted">
-                  {group.items.map((item) => (
-                    <li className="border-t border-border-dark pt-3" key={item}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* ── Showcase Grid ── */}
       <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-24">
         <PageDecor tone={isGas ? "process" : "services"} />
         <div className="relative mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-            <div>
-              <p className="text-base font-semibold text-accent">
-                {labels.includes}
-              </p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-                {labels.exampleTitle}
-              </h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {examples.map((item) => (
+          <div className="mb-10">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+              {labels.includes}
+            </p>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
+              {labels.exampleTitle}
+            </h2>
+          </div>
+
+          <div
+            className={`grid gap-5 ${
+              isGas ? "sm:grid-cols-2" : "sm:grid-cols-2 xl:grid-cols-3"
+            }`}
+          >
+            {showcaseItems.map((item) => {
+              const cat = inferCategory(item.title);
+              const colors = CATEGORY_COLORS[cat] ?? CATEGORY_COLORS.default;
+              return (
                 <article
-                  className="rounded-lg border border-border bg-card p-6"
                   key={item.title}
+                  className="group isolate overflow-hidden rounded-xl border border-border bg-card transition duration-300 hover:-translate-y-1.5 hover:border-accent hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
                 >
-                  <p className="text-xl font-semibold">{item.title}</p>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    {"description" in item ? item.description : item.summary}
-                  </p>
+                  {/* Image area */}
+                  <div className="relative aspect-[16/10] overflow-hidden border-b border-border/70 bg-transparent">
+                    {item.image ? (
+                      <Image
+                        alt={`${item.title} mockup`}
+                        className="scale-[1.03] object-cover [object-position:center_78%] transition duration-500 group-hover:scale-[1.07]"
+                        fill
+                        sizes={
+                          isGas
+                            ? "(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                            : "(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 90vw"
+                        }
+                        src={item.image}
+                      />
+                    ) : (
+                      /* Placeholder mockup */
+                      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,255,117,0.10),rgba(255,255,255,0.03))] p-5">
+                        <div className="h-full rounded-lg border border-border bg-card/60 p-4">
+                          <div className="flex gap-1.5">
+                            <span className="h-2 w-2 rounded-full bg-accent/70" />
+                            <span className="h-2 w-2 rounded-full bg-muted/40" />
+                            <span className="h-2 w-2 rounded-full bg-muted/30" />
+                          </div>
+                          <div className="mt-4 grid gap-2.5">
+                            <span className="h-3 w-3/4 rounded-full bg-muted/25" />
+                            <span className="h-3 w-1/2 rounded-full bg-muted/20" />
+                            <span className="mt-2 h-14 rounded-md bg-surface/60" />
+                            <div className="flex gap-2">
+                              <span className="h-3 w-1/3 rounded-full bg-muted/20" />
+                              <span className="h-3 w-1/4 rounded-full bg-accent/20" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Card body */}
+                  <div className="p-4">
+                    {cat !== "default" && (
+                      <span
+                        className={`mb-3 inline-block rounded-full border px-2.5 py-0.5 text-xs font-semibold ${colors.badge}`}
+                      >
+                        {cat}
+                      </span>
+                    )}
+                    <p className="text-base font-semibold leading-tight">{item.title}</p>
+                    {/* accent underline */}
+                    <div className={`mt-3 h-0.5 w-8 rounded-full ${colors.bar}`} />
+                  </div>
                 </article>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="px-5 pb-12 sm:px-8 sm:pb-14 lg:px-10 lg:pb-24">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-lg border border-border bg-card p-8 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-3xl font-semibold">{labels.ctaTitle}</p>
-            <p className="mt-3 text-sm leading-7 text-muted">
+      {/* ── WhatsApp CTA ── */}
+      <section className="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10 lg:pb-28">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-accent/25 bg-card p-8 sm:p-10 md:flex md:items-center md:justify-between md:gap-8">
+          {/* decorative blobs */}
+          <span className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/5" />
+          <span className="pointer-events-none absolute -bottom-20 left-1/3 h-40 w-40 rounded-full bg-accent/[0.04]" />
+
+          <div className="relative mb-6 md:mb-0">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
+              {labels.ctaEyebrow}
+            </p>
+            <p className="text-2xl font-semibold leading-snug sm:text-3xl">
+              {labels.ctaTitle}
+            </p>
+            <p className="mt-3 max-w-lg text-sm leading-7 text-muted">
               {labels.ctaDescription}
             </p>
           </div>
-          <WhatsAppCta href={whatsappLink(service.title, language)}>
-            {labels.cta}
-          </WhatsAppCta>
+
+          <div className="relative shrink-0">
+            <WhatsAppCta href={whatsappLink(service.title, language)}>
+              {labels.cta}
+            </WhatsAppCta>
+          </div>
         </div>
       </section>
+
     </main>
   );
 }

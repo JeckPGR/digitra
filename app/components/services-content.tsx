@@ -72,11 +72,10 @@ export function ServicesContent() {
                   className="flex h-full flex-col rounded-lg border border-border bg-card p-6"
                   key={item.title}
                 >
-                  <p className="text-xl font-semibold">{item.title}</p>
-                  <p className="mt-3 text-2xl font-semibold text-accent">
-                    {item.price}
+                  <p className="text-2xl font-semibold leading-tight">
+                    {item.title}
                   </p>
-                  <p className="mt-4 flex-1 text-sm leading-7 text-muted">
+                  <p className="mt-5 flex-1 text-sm leading-7 text-muted">
                     {item.description}
                   </p>
                   <WhatsAppCta
@@ -84,7 +83,7 @@ export function ServicesContent() {
                     href={whatsappLink(`custom ${item.title}`, language)}
                     tone="outline"
                   >
-                    {whatsapp.customGas}
+                    {item.button}
                   </WhatsAppCta>
                 </article>
               ))}
