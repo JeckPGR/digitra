@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { CountUpNumber } from "./components/count-up-number";
+import { CtaPanel } from "./components/cta-panel";
 import { useLanguage } from "./components/language-provider";
 import { PageDecor } from "./components/page-decor";
 import { SmoothFaq } from "./components/smooth-faq";
@@ -197,24 +198,18 @@ export default function Home() {
 
       <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
         <PageDecor align="right" tone="contact" />
-        <div className="mx-auto grid max-w-7xl gap-8 rounded-lg border border-border bg-card p-8 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
-            <h2 className="mt-4 text-5xl font-semibold leading-[0.95] tracking-normal sm:text-7xl">
-              {home.closing.title}
-            </h2>
-          </div>
-          <div>
-            <p className="text-base leading-8 text-muted">
-              {home.closing.description}
-            </p>
+        <CtaPanel
+          action={
             <WhatsAppCta
-              className="mt-8"
-              href={whatsappLink("memulai proyek website")}
+              href={whatsappLink(home.topics.closing, language)}
             >
-              Start with Digitra
+              {home.closing.cta}
             </WhatsAppCta>
-          </div>
-        </div>
+          }
+          description={home.closing.description}
+          eyebrow={copy.site.contactTitle}
+          title={home.closing.title}
+        />
       </section>
     </main>
   );

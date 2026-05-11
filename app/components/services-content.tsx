@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { whatsappLink } from "../lib/site";
+import { CtaPanel } from "./cta-panel";
 import { useLanguage } from "./language-provider";
 import { PackageTabs } from "./package-tabs";
 import { PageDecor } from "./page-decor";
@@ -221,22 +222,19 @@ export function ServicesContent() {
 
       <section className="relative overflow-hidden px-5 pb-12 sm:px-8 sm:pb-14 lg:px-10 lg:py-24">
         <PageDecor tone="contact" />
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-lg border border-border bg-card p-8 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-3xl font-semibold">
-              {servicesPage.recommendation.title}
-            </p>
-            <p className="mt-3 text-sm leading-7 text-muted">
-              {servicesPage.recommendation.description}
-            </p>
-          </div>
-          <Link
-            className="inline-flex h-12 items-center justify-center rounded-full border border-accent px-6 text-sm font-semibold text-accent transition hover:bg-accent hover:text-accent-foreground"
-            href="/contact"
-          >
-            {servicesPage.recommendation.cta}
-          </Link>
-        </div>
+        <CtaPanel
+          action={
+            <Link
+              className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+              href="/contact"
+            >
+              {servicesPage.recommendation.cta}
+            </Link>
+          }
+          description={servicesPage.recommendation.description}
+          eyebrow={servicesPage.hero.eyebrow}
+          title={servicesPage.recommendation.title}
+        />
       </section>
     </main>
   );

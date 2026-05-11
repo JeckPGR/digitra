@@ -1,11 +1,11 @@
-import { ServiceDetailContent } from "../../components/service-detail-content";
+import { DesignServiceContent } from "../../components/design-service-content";
 
 export const metadata = {
-  title: "GAS Web Business Application - Digitra",
+  title: "Jasa Desain Logo, Brosur & Feeds Instagram - Digitra",
   description:
-    "Detail layanan GAS Web Business Application Digitra untuk dashboard, workflow, approval, reporting, dan automation berbasis Google Apps Script.",
+    "Digitra menyediakan jasa desain logo, brosur, poster, dan feeds Instagram profesional dengan harga bersaing, proses rapi, dan hasil siap pakai untuk bisnis.",
 };
 
-export default function GasServicePage() {
-  return <ServiceDetailContent kind="gas" />;
+export default function DesignsServicePage() {
+  return <DesignServiceContent />;
 }

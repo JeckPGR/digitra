@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { whatsappLink } from "../lib/site";
+import { CtaPanel } from "./cta-panel";
 import { useLanguage } from "./language-provider";
 import { PageDecor } from "./page-decor";
 import { WhatsAppCta } from "./whatsapp-cta";
@@ -50,7 +51,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           ctaEyebrow: "Custom System",
           ctaTitle: "Ingin sistem custom mengikuti bisnis Anda?",
           ctaDescription:
-            "Kirim brief singkat — scope bisa disesuaikan penuh dengan workflow dan materi yang sudah tersedia.",
+            "Kirim brief singkat, ruang lingkup bisa disesuaikan penuh dengan workflow dan materi yang sudah tersedia.",
           cta: "Hubungi Kami via WhatsApp",
           placeholderNote:
             "Area ini disiapkan untuk gambar, screenshot, mockup, atau preview workflow.",
@@ -130,19 +131,22 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
                   className="group isolate overflow-hidden rounded-xl border border-border bg-card transition duration-300 hover:-translate-y-1.5 hover:border-accent hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
                 >
                   {/* Image area */}
-                  <div className="relative aspect-[16/10] overflow-hidden border-b border-border/70 bg-transparent">
+                  <div className="relative aspect-[16/10] overflow-hidden border-b border-border/70 bg-[radial-gradient(circle_at_50%_30%,rgba(255,140,97,0.14),transparent_46%),linear-gradient(135deg,rgba(249,249,249,0.045),rgba(37,211,102,0.055))]">
                     {item.image ? (
-                      <Image
-                        alt={`${item.title} mockup`}
-                        className="scale-[1.03] object-cover [object-position:center_78%] transition duration-500 group-hover:scale-[1.07]"
-                        fill
-                        sizes={
-                          isGas
-                            ? "(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                            : "(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 90vw"
-                        }
-                        src={item.image}
-                      />
+                      <div className="absolute inset-3 sm:inset-4">
+                        <Image
+                          alt={`${item.title} mockup`}
+                          className="object-contain object-bottom drop-shadow-[0_18px_36px_rgba(0,0,0,0.28)] transition duration-500 group-hover:scale-[1.025]"
+                          fill
+                          sizes={
+                            isGas
+                              ? "(min-width: 1280px) 640px, (min-width: 640px) 50vw, 100vw"
+                              : "(min-width: 1280px) 420px, (min-width: 640px) 50vw, 100vw"
+                          }
+                          src={item.image}
+                          unoptimized
+                        />
+                      </div>
                     ) : (
                       /* Placeholder mockup */
                       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,255,117,0.10),rgba(255,255,255,0.03))] p-5">
@@ -188,29 +192,16 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
 
       {/* ── WhatsApp CTA ── */}
       <section className="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10 lg:pb-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-accent/25 bg-card p-8 sm:p-10 md:flex md:items-center md:justify-between md:gap-8">
-          {/* decorative blobs */}
-          <span className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/5" />
-          <span className="pointer-events-none absolute -bottom-20 left-1/3 h-40 w-40 rounded-full bg-accent/[0.04]" />
-
-          <div className="relative mb-6 md:mb-0">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
-              {labels.ctaEyebrow}
-            </p>
-            <p className="text-2xl font-semibold leading-snug sm:text-3xl">
-              {labels.ctaTitle}
-            </p>
-            <p className="mt-3 max-w-lg text-sm leading-7 text-muted">
-              {labels.ctaDescription}
-            </p>
-          </div>
-
-          <div className="relative shrink-0">
+        <CtaPanel
+          action={
             <WhatsAppCta href={whatsappLink(service.title, language)}>
               {labels.cta}
             </WhatsAppCta>
-          </div>
-        </div>
+          }
+          description={labels.ctaDescription}
+          eyebrow={labels.ctaEyebrow}
+          title={labels.ctaTitle}
+        />
       </section>
 
     </main>

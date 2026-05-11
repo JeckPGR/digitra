@@ -1,9 +1,9 @@
 import { ServicesContent } from "../components/services-content";
 
 export const metadata = {
-  title: "Services - Digitra",
+  title: "Jasa Website, Automation & Desain Logo - Digitra",
   description:
-    "Layanan Digitra mencakup GAS Web BusinessApplication , Company Profile, Landing Page, dan desain visual bisnis.",
+    "Layanan Digitra mencakup pembuatan website, GAS automation, company profile, landing page, jasa desain logo, brosur, poster, dan feeds Instagram profesional.",
 };
 
 export default function ServicesPage() {

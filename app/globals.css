@@ -3,6 +3,8 @@
 :root {
   color-scheme: dark;
 
+  --font-geist-sans: Arial, Helvetica, sans-serif;
+  --font-geist-mono: "Courier New", Courier, monospace;
   --surface: #241f51;
   --surface-foreground: #f9f9f9;
   --foreground: #f9f9f9;

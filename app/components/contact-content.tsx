@@ -15,7 +15,7 @@ export function ContactContent() {
         <PageDecor tone="contact" />
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
-            <p className="rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent sm:w-fit">
+            <p className="text-base font-semibold text-accent">
               {contactPage.hero.eyebrow}
             </p>
             <h1 className="mt-6 text-5xl font-semibold leading-[0.96] tracking-normal sm:text-7xl">

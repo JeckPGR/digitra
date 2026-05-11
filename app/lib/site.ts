@@ -54,24 +54,24 @@ export const siteCopy = {
     serviceHighlights: [
       {
         title: "GAS Web Business Application",
-        href: "/services#gas",
+        href: "/services/gas",
         eyebrow: "Automation",
         summary:
           "Sistem Google Apps Script untuk dashboard, approval, reporting, dan workflow bisnis yang berulang.",
       },
       {
         title: "Company Profile & Landing Page",
-        href: "/services#company-profile",
+        href: "/services/company-profile-landing-page",
         eyebrow: "Website",
         summary:
           "Halaman profesional yang menjelaskan value bisnis, membangun trust, dan mengarahkan calon klien ke CTA.",
       },
       {
         title: "Design",
-        href: "/services#design",
+        href: "/services/designs",
         eyebrow: "Brand Visual",
         summary:
-          "Logo, brosur, poster, dan social media asset agar komunikasi brand terlihat konsisten.",
+          "Jasa desain logo, brosur, poster, dan feeds Instagram profesional dengan harga bersaing untuk brand yang ingin tampil konsisten.",
       },
     ],
     home: {
@@ -328,9 +328,14 @@ export const siteCopy = {
       },
       design: {
         eyebrow: "03 / Design",
-        title: "Visual brand assets untuk setiap channel.",
+        title: "Jasa desain logo, brosur, dan feeds Instagram profesional.",
         description:
-          "Logo, brosur, poster, dan social media feeds yang membantu brand terlihat konsisten dari website sampai materi promosi.",
+          "Digitra membantu bisnis membuat desain logo, brosur, poster, dan konten feeds media sosial yang rapi, konsisten, dan siap dipakai untuk promosi online maupun offline.",
+        detail: {
+          title: "Desain visual yang dibuat sesuai kebutuhan brand dan budget.",
+          description:
+            "Setiap paket desain disusun agar bisnis mendapatkan visual yang profesional tanpa biaya berlebihan. Mulai dari logo usaha, desain brosur promosi, poster campaign, sampai jasa desain feeds Instagram profesional, Digitra menjaga proses brief, konsep, revisi, dan file akhir tetap jelas.",
+        },
       },
       workflow: {
         eyebrow: "Workflow",
@@ -403,24 +408,51 @@ export const siteCopy = {
       {
         title: "Logo Design",
         packages: [
-          "Starter - Rp 200.000, 3 pilihan desain, all file format, 3x revisi",
-          "Top - Rp 400.000, 4 pilihan desain, all file format, 4x revisi, 3D mockup",
-          "Premium - Rp 750.000, 5 pilihan desain, VIP support, all file format, unlimited revisi, 3D mockup",
+          "Starter - Rp 200.000, cocok untuk logo usaha baru, 3 pilihan konsep, semua format file, dan 3x revisi",
+          "Top - Rp 400.000, pilihan terbaik untuk brand yang ingin tampil lebih matang, 4 konsep desain, semua format file, 4x revisi, dan 3D mockup",
+          "Premium - Rp 750.000, jasa desain logo profesional dengan 5 konsep, VIP support, semua format file, revisi fleksibel, dan 3D mockup",
         ],
       },
       {
         title: "Brosur / Poster",
         packages: [
-          "Easy - 2 desain, all file format, 2x revisi",
-          "Medium - 3 desain, all file format, 2x revisi, 3D mockup",
-          "Hard - 3 desain, VIP support, all file format, 3x revisi, 3D mockup",
+          "Easy - 2 desain brosur atau poster promosi, semua format file, dan 2x revisi",
+          "Medium - 3 desain, semua format file, 2x revisi, dan 3D mockup untuk presentasi yang lebih menarik",
+          "Hard - 3 desain premium, VIP support, semua format file, 3x revisi, dan 3D mockup",
         ],
       },
       {
         title: "Social Media Feeds",
         packages: [
-          "Harga dan layanan OnChat, disesuaikan dengan kebutuhan konten dan diskusi lebih lanjut",
+          "Paket jasa desain feeds Instagram profesional tersedia OnChat dan disesuaikan dengan jumlah konten, gaya visual, serta kebutuhan campaign brand Anda",
         ],
+      },
+    ],
+    designFaqs: [
+      {
+        question: "Berapa harga jasa desain logo di Digitra?",
+        answer:
+          "Harga jasa desain logo Digitra mulai dari Rp 200.000 untuk paket Starter. Paket ini sudah mencakup beberapa pilihan konsep, file siap pakai, dan revisi. Untuk brand yang membutuhkan tampilan lebih premium, tersedia paket Top dan Premium dengan konsep lebih banyak, 3D mockup, dan support yang lebih intensif. Biayanya tetap bersaing karena scope dibuat jelas sejak awal.",
+      },
+      {
+        question: "Apakah Digitra menyediakan jasa desain feeds Instagram profesional?",
+        answer:
+          "Ya. Digitra menyediakan jasa desain feeds Instagram profesional untuk bisnis yang ingin tampilan media sosial lebih rapi, konsisten, dan mudah dikenali. Desain dapat disesuaikan dengan warna brand, gaya konten, target audiens, dan kebutuhan campaign sehingga feed tidak hanya terlihat menarik, tetapi juga mendukung komunikasi bisnis.",
+      },
+      {
+        question: "Berapa lama pembuatan desain brosur atau poster?",
+        answer:
+          "Durasi pembuatan desain brosur atau poster biasanya bergantung pada jumlah desain, kelengkapan brief, dan tingkat revisi. Setelah materi seperti teks, logo, foto produk, dan referensi visual lengkap, Digitra dapat menyusun timeline yang jelas agar proses lebih cepat dan hasilnya tetap profesional.",
+      },
+      {
+        question: "Apa saja file akhir yang didapat dari layanan desain Digitra?",
+        answer:
+          "Digitra menyiapkan file akhir sesuai kebutuhan penggunaan, seperti format untuk upload media sosial, cetak brosur, presentasi, atau kebutuhan branding. Untuk paket logo, klien bisa mendapatkan semua format file yang dibutuhkan agar desain mudah dipakai di website, banner, kemasan, kartu nama, dan materi promosi lainnya.",
+      },
+      {
+        question: "Mengapa memilih Digitra untuk desain logo, brosur, dan media sosial?",
+        answer:
+          "Digitra cocok untuk bisnis yang ingin desain terlihat profesional tanpa proses yang rumit. Kami membantu merapikan brief, membuat visual yang sesuai karakter brand, memberi ruang revisi yang jelas, dan menawarkan harga bersaing. Hasil desain dibuat agar siap dipakai untuk promosi digital maupun cetak.",
       },
     ],
     workflowSteps: [
@@ -551,24 +583,24 @@ export const siteCopy = {
     serviceHighlights: [
       {
         title: "GAS Web Business Application",
-        href: "/services#gas",
+        href: "/services/gas",
         eyebrow: "Automation",
         summary:
           "Google Apps Script systems for dashboards, approvals, reporting, and recurring business workflows.",
       },
       {
         title: "Company Profile & Landing Page",
-        href: "/services#company-profile",
+        href: "/services/company-profile-landing-page",
         eyebrow: "Website",
         summary:
           "Professional pages that explain business value, build trust, and guide prospects toward a clear CTA.",
       },
       {
         title: "Design",
-        href: "/services#design",
+        href: "/services/designs",
         eyebrow: "Brand Visual",
         summary:
-          "Logos, brochures, posters, and social media assets that keep brand communication consistent.",
+          "Professional logo design, brochures, posters, and Instagram feed design with competitive pricing for consistent brand visuals.",
       },
     ],
     home: {
@@ -833,9 +865,14 @@ export const siteCopy = {
       },
       design: {
         eyebrow: "03 / Design",
-        title: "Visual brand assets for every channel.",
+        title: "Professional logo, brochure, and Instagram feed design.",
         description:
-          "Logos, brochures, posters, and social media feeds that help your brand stay consistent from website to promotional materials.",
+          "Digitra helps businesses create logo designs, brochures, posters, and social media feeds that look consistent, professional, and ready for online or offline promotion.",
+        detail: {
+          title: "Visual design shaped around your brand needs and budget.",
+          description:
+            "Each design package is structured so businesses can get professional visuals without unnecessary cost. From business logos, promotional brochures, and campaign posters to professional Instagram feed design, Digitra keeps the brief, concept, revision, and final file process clear.",
+        },
       },
       workflow: {
         eyebrow: "Workflow",
@@ -908,24 +945,51 @@ export const siteCopy = {
       {
         title: "Logo Design",
         packages: [
-          "Starter - Rp 200.000, 3 design options, all file formats, 3 revisions",
-          "Top - Rp 400.000, 4 design options, all file formats, 4 revisions, 3D mockup",
-          "Premium - Rp 750.000, 5 design options, VIP support, all file formats, unlimited revisions, 3D mockup",
+          "Starter - Rp 200.000, ideal for new business logos, 3 concept options, all file formats, and 3 revisions",
+          "Top - Rp 400.000, best for brands that want a more polished look, 4 design concepts, all file formats, 4 revisions, and 3D mockup",
+          "Premium - Rp 750.000, professional logo design with 5 concepts, VIP support, all file formats, flexible revisions, and 3D mockup",
         ],
       },
       {
         title: "Brochure / Poster",
         packages: [
-          "Easy - 2 designs, all file formats, 2 revisions",
-          "Medium - 3 designs, all file formats, 2 revisions, 3D mockup",
-          "Hard - 3 designs, VIP support, all file formats, 3 revisions, 3D mockup",
+          "Easy - 2 brochure or promotional poster designs, all file formats, and 2 revisions",
+          "Medium - 3 designs, all file formats, 2 revisions, and 3D mockup for stronger presentation",
+          "Hard - 3 premium designs, VIP support, all file formats, 3 revisions, and 3D mockup",
         ],
       },
       {
         title: "Social Media Feeds",
         packages: [
-          "Pricing and service details are OnChat, adjusted to your content needs and further discussion",
+          "Professional Instagram feed design packages are available OnChat and adjusted to your content volume, visual direction, and campaign needs",
         ],
+      },
+    ],
+    designFaqs: [
+      {
+        question: "How much does logo design cost at Digitra?",
+        answer:
+          "Digitra logo design pricing starts from Rp 200.000 for the Starter package. It includes multiple concept options, ready-to-use files, and revisions. For brands that need a more premium look, Top and Premium packages include more concepts, 3D mockup, and more intensive support while keeping the scope and cost competitive.",
+      },
+      {
+        question: "Does Digitra offer professional Instagram feed design services?",
+        answer:
+          "Yes. Digitra offers professional Instagram feed design services for businesses that want a cleaner, more consistent, and recognizable social media presence. Designs can follow your brand colors, content style, target audience, and campaign needs so your feed supports business communication, not just decoration.",
+      },
+      {
+        question: "How long does brochure or poster design take?",
+        answer:
+          "The timeline for brochure or poster design depends on the number of designs, brief completeness, and revision level. Once materials such as copy, logo, product photos, and visual references are complete, Digitra can set a clear timeline so the process stays efficient and the result remains professional.",
+      },
+      {
+        question: "What final files will I receive from Digitra design services?",
+        answer:
+          "Digitra prepares final files based on how the design will be used, such as social media upload, brochure printing, presentation, or brand assets. For logo packages, clients can receive the file formats needed for websites, banners, packaging, business cards, and other promotional materials.",
+      },
+      {
+        question: "Why choose Digitra for logo, brochure, and social media design?",
+        answer:
+          "Digitra is a strong fit for businesses that want professional design without a complicated process. We help clarify the brief, create visuals that match the brand character, provide clear revision space, and offer competitive pricing. The final designs are prepared for both digital and printed promotions.",
       },
     ],
     workflowSteps: [
