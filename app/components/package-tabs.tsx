@@ -75,7 +75,7 @@ export function PackageTabs({
       <div className="tab-panel mt-6 grid gap-5 lg:grid-cols-2" key={activeTab}>
         {packages.map((item) => (
           <article
-            className={`group relative isolate flex h-full overflow-hidden rounded-xl border p-7 transition duration-300 hover:-translate-y-1 ${
+            className={`group relative isolate flex h-full min-w-0 flex-col overflow-hidden rounded-xl border p-7 transition duration-300 hover:-translate-y-1 ${
               item.featured
                 ? "border-accent bg-card text-card-foreground shadow-accent"
                 : "border-border-dark bg-surface/10 text-panel-foreground hover:border-accent/70"
@@ -88,22 +88,25 @@ export function PackageTabs({
                 item.featured ? "opacity-100" : "opacity-60"
               }`}
             />
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <div>
+            <div className="relative z-10 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div className="min-w-0">
                 <p className="text-sm font-semibold text-accent">
                   {item.label}
                 </p>
                 <h4 className="mt-2 text-2xl font-semibold">{item.name}</h4>
               </div>
               <div className="sm:text-right">
-                <p className="text-2xl font-semibold">{item.price}</p>
+                <p className="whitespace-nowrap text-2xl font-semibold">
+                  {item.price}
+                </p>
                 <span className="mt-2 inline-flex rounded-full border border-accent/35 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-                  {item.features.length} {language === "id" ? "poin" : "benefits"}
+                  {item.features.length}{" "}
+                  {language === "id" ? "poin" : "benefits"}
                 </span>
               </div>
             </div>
             <ul
-              className={`mt-7 grid flex-1 gap-3 text-sm leading-6 sm:grid-cols-2 ${
+              className={`relative z-10 mt-7 grid flex-1 gap-3 text-sm leading-6 sm:grid-cols-2 ${
                 item.featured ? "text-muted" : "text-muted-dark"
               }`}
             >
@@ -120,7 +123,7 @@ export function PackageTabs({
               ))}
             </ul>
             <WhatsAppCta
-              className="mt-7 h-11 w-full px-5"
+              className="relative z-10 mt-7 h-11 w-full px-5"
               href={whatsappLink(`${active.label} ${item.name}`, language)}
               tone="blue"
             >

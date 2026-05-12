@@ -130,21 +130,21 @@ export const siteCopy = {
         items: [
           {
             quote:
-              "Digitra membantu kami mengubah brief yang masih kasar menjadi website yang jauh lebih jelas dan siap dikirim ke klien.",
-            name: "Rafi Pradana",
-            role: "Founder UMKM Kuliner",
+              "Fitur otomatisasi HPP-nya benar-benar menyelamatkan bisnis saya. Sekarang saya bisa tracking profit asli tiap hari, plus riwayat keluar masuk bahan baku tercatat sangat detail. Jujur, dengan harga langganan yang sangat terjangkau, aplikasi ini di luar ekspektasi dan sangat membantu operasional harian coffee shop kami.",
+            name: "Fahmi Rizal",
+            role: "Owner, Kala Kopi Kiosk",
           },
           {
             quote:
-              "Prosesnya rapi. Kami tahu materi apa yang harus disiapkan, kapan revisi masuk, dan scope akhirnya tidak melebar.",
-            name: "Nadia Kirana",
-            role: "Marketing Lead",
+              "Sistem manajemen F&B ini bikin dapur dan kasir jadi jauh lebih sinkron. Dulu pusing hitung margin tiap menu, sekarang potong stok dan hitung bahan baku sudah otomatis. Enggak nyangka dengan biaya yang murah, kafe kami bisa punya sistem manajemen internal se-powerful ini.",
+            name: "Sarah Amalia",
+            role: "Operations Manager, Tropis Eatery & Space",
           },
           {
             quote:
-              "Dashboard berbasis Google Apps Script membuat rekap harian tim lebih cepat dibanding cara manual sebelumnya.",
-            name: "Bagas Erlangga",
-            role: "Operations Manager",
+              "Kesan pertamanya: keren banget! Desain company profile-nya eksklusif dan sama sekali gak kelihatan kayak pakai template pasaran. Pengerjaannya juga super cepat, cuma 4 hari udah jadi 4 halaman yang informasinya sangat detail. Harganya termasuk sangat murah untuk kualitas website sebagus ini.",
+            name: "Andry",
+            role: "Founder, tanipremium.id",
           },
         ],
       },
@@ -667,21 +667,21 @@ export const siteCopy = {
         items: [
           {
             quote:
-              "Digitra helped us turn a rough brief into a much clearer website that was ready to send to prospective clients.",
-            name: "Rafi Pradana",
-            role: "Culinary MSME Founder",
+              "The automated COGS feature genuinely saved my business. Now I can track real profit every day, and every stock movement for ingredients is recorded in great detail. Honestly, at such an affordable subscription price, this app exceeded expectations and really helps our coffee shop's daily operations.",
+            name: "Fahmi Rizal",
+            role: "Owner, Kala Kopi Kiosk",
           },
           {
             quote:
-              "The process was neat. We knew what materials to prepare, when revisions came in, and the final scope did not spread.",
-            name: "Nadia Kirana",
-            role: "Marketing Lead",
+              "This F&B management system makes the kitchen and cashier much more synchronized. We used to struggle calculating margins for each menu, but now stock deduction and ingredient costing are automatic. I did not expect that with such a low cost, our cafe could have an internal management system this powerful.",
+            name: "Sarah Amalia",
+            role: "Operations Manager, Tropis Eatery & Space",
           },
           {
             quote:
-              "The Google Apps Script dashboard made our daily team recap faster than the manual method we used before.",
-            name: "Bagas Erlangga",
-            role: "Operations Manager",
+              "First impression: seriously impressive! The company profile design feels exclusive and does not look like a generic template at all. The work was also super fast, only 4 days for a 4-page site with very detailed information. The price is very affordable for a website this good.",
+            name: "Andry",
+            role: "Founder, tanipremium.id",
           },
         ],
       },
