@@ -26,7 +26,7 @@ export function WhatsAppCta({
 
   return (
     <a
-      className={`${shapeClass} ${toneClass} ${className}`}
+      className={`${shapeClass} ${toneClass} ${className} !text-whatsapp`}
       rel="noreferrer"
       target="_blank"
       {...props}
@@ -38,7 +38,7 @@ export function WhatsAppCta({
 }
 
 export function WhatsAppIcon({
-  className = "h-4 w-4 shrink-0",
+  className = "h-4 w-4 shrink-0 text-white",
 }: {
   className?: string;
 }) {

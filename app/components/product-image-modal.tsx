@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { type ReactNode, useEffect, useId, useState } from "react";
+import {
+  type CSSProperties,
+  type ReactNode,
+  useEffect,
+  useId,
+  useState,
+} from "react";
 import { createPortal } from "react-dom";
 
 type ProductImageModalProps = {
@@ -22,6 +28,7 @@ export function ProductImageModal({
   src,
 }: ProductImageModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [aspectRatio, setAspectRatio] = useState(16 / 10);
   const titleId = useId();
 
   useEffect(() => {
@@ -41,6 +48,23 @@ export function ProductImageModal({
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const image = new window.Image();
+    image.onload = () => {
+      if (image.naturalWidth > 0 && image.naturalHeight > 0) {
+        setAspectRatio(image.naturalWidth / image.naturalHeight);
+      }
+    };
+    image.src = src;
+  }, [isOpen, src]);
+
+  const panelStyle = {
+    "--pim-aspect-ratio": aspectRatio,
+    "--pim-frame-width": `min(94vw, calc(90vh * ${aspectRatio}))`,
+  } as CSSProperties;
+
   const modal =
     isOpen && typeof document !== "undefined"
       ? createPortal(
@@ -59,6 +83,7 @@ export function ProductImageModal({
               aria-modal="true"
               className="pim-panel"
               role="dialog"
+              style={panelStyle}
             >
               <h2 className="sr-only" id={titleId}>
                 {alt}
@@ -99,14 +124,6 @@ export function ProductImageModal({
                   unoptimized
                   priority
                 />
-                {/* Subtle bottom vignette for depth */}
-                <div className="pim-vignette" aria-hidden="true" />
-              </div>
-
-              {/* Caption bar */}
-              <div className="pim-caption">
-                <span className="pim-caption-dot" aria-hidden="true" />
-                <p className="pim-caption-text">{alt}</p>
               </div>
             </div>
           </div>,
@@ -118,11 +135,44 @@ export function ProductImageModal({
     <>
       <button
         aria-label={`Buka preview ${alt}`}
-        className={className ?? "block cursor-zoom-in text-left"}
+        className={
+          className
+            ? `zoom-trigger ${className}`
+            : "zoom-trigger relative block cursor-zoom-in overflow-hidden text-left"
+        }
         onClick={() => setIsOpen(true)}
         type="button"
       >
         {children}
+        <span className="zoom-trigger-icon" aria-hidden="true">
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="10.75"
+              cy="10.75"
+              r="5.25"
+              stroke="currentColor"
+              strokeWidth="1.8"
+            />
+            <path
+              d="M15 15L20 20"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="1.8"
+            />
+            <path
+              d="M10.75 8.45V13.05M8.45 10.75H13.05"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeWidth="1.7"
+            />
+          </svg>
+        </span>
       </button>
       {modal}
     </>

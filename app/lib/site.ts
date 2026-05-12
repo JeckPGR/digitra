@@ -250,7 +250,7 @@ export const siteCopy = {
         eyebrow: "Layanan Digitra",
         title: "Layanan digital sederhana untuk pertumbuhan bisnis yang serius.",
         description:
-          "Bangun fondasi digital bisnis Anda dengan layanan yang tepat: website profesional untuk menjelaskan bisnis, automation Google Apps Script untuk merapikan kerja internal, dan visual brand yang membuat bisnis tampil lebih konsisten, kredibel, dan mudah dipercaya.",
+          "Bangun fondasi digital bisnis Anda dengan layanan yang tepat: website profesional untuk menjelaskan bisnis, automation Google Apps Script untuk merapikan alur kerja internal, dan visual brand yang membuat bisnis tampil lebih konsisten, kredibel, dan mudah dipercaya.",
         chips: ["Web", "Automation", "Design"],
       },
       gas: {
@@ -353,22 +353,22 @@ export const siteCopy = {
       },
     },
     gasExamples: [
+       {
+        title: "F&B Business Management",
+        description:
+          "Sistem POS F&B cerdas dengan sinkronisasi data real-time. Nikmati kemudahan kalkulasi HPP otomatis dan pelacakan bahan baku akurat untuk amankan profitabilitas bisnis Anda",
+        button: "Tanya Detail ",
+      },
       {
         title: "Fashion Retail POS",
         description:
-          "Kelola transaksi retail & grosir (bulk) dan lacak seluruh siklus pesanan secara end-to-end, mulai dari proses tunggu hingga diterima pelanggan, dalam satu dashboard cerdas.",
+          "Kelola transaksi retail & grosir, dan lacak seluruh siklus pesanan secara end-to-end, mulai dari proses tunggu hingga diterima pelanggan, dalam satu dashboard cerdas.",
         button: "Tanya Detail",
       },
       {
         title: "Digital Reseller App",
         description:
           "Sistem khusus bagi pengelola bisnis akun premium. Dilengkapi fitur loyalty card otomatis yang ter-update di setiap transaksi untuk tingkatkan retensi pembelian",
-        button: "Tanya Detail ",
-      },
-      {
-        title: "F&B Business Management",
-        description:
-          "Sistem POS F&B cerdas dengan sinkronisasi data real-time. Nikmati kemudahan kalkulasi HPP otomatis dan pelacakan bahan baku akurat untuk amankan profitabilitas bisnis Anda",
         button: "Tanya Detail ",
       },
     ],

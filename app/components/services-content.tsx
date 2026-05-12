@@ -63,7 +63,7 @@ export function ServicesContent() {
                 {servicesPage.gas.description}
               </p>
               <Link
-                className="mt-6 hidden h-11 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-accent-foreground lg:inline-flex"
+                className="mt-6 hidden h-11 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white lg:inline-flex"
                 href="/services/gas"
               >
                 {servicesPage.gas.learnMore}
@@ -93,7 +93,7 @@ export function ServicesContent() {
             </div>
           </div>
           <Link
-            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-accent-foreground lg:hidden"
+            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white lg:hidden"
             href="/services/gas"
           >
             {servicesPage.gas.learnMore}

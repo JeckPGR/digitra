@@ -339,7 +339,7 @@ function WorkImageCard({
     >
       <ProductImageModal
         alt={`${item.title} ${item.label}`}
-        className="block w-full cursor-zoom-in border-0 bg-transparent p-0 text-left"
+        className="relative block w-full cursor-zoom-in overflow-hidden border-0 bg-transparent p-0 text-left"
         src={item.image}
       >
         <div

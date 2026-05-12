@@ -79,7 +79,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           back: "Kembali ke Services",
           overview: "Ringkasan layanan",
           media: "Area visual",
-          includes: "Apa yang kami kerjakan",
+          includes: "Yang Telah kami kerjakan",
           exampleTitle: isGas ? "Showcase aplikasi GAS" : "Showcase website",
           packageTitle: isGas ? "Format pengerjaan" : "Paket awal",
           ctaEyebrow: "Custom System",
@@ -169,7 +169,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
                     {item.image ? (
                       <ProductImageModal
                         alt={`${item.title} showcase`}
-                        className="absolute inset-0 block cursor-zoom-in border-0 bg-transparent p-0 text-left"
+                        className="absolute inset-0 block cursor-zoom-in overflow-hidden border-0 bg-transparent p-0 text-left"
                         src={item.image}
                       >
                         <div
