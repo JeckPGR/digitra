@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const localSiteUrl = "http://localhost:3000";
-const productionSiteUrl = "https://digitra.site";
+const productionSiteUrl = "https://www.digitra.site";
 
 type SitemapRoute = {
   path: string;
