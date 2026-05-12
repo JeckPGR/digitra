@@ -22,6 +22,7 @@ export function DesignServiceContent() {
           packageTitle: "Paket desain Digitra",
           packageEyebrow: "Harga & Layanan",
           faqEyebrow: "FAQ Desain",
+          learnMore: "Pelajari Lebih Lanjut",
           ctaEyebrow: "Brand Visual",
           ctaTitle: "Butuh desain yang terlihat profesional dan siap dipakai?",
           ctaDescription:
@@ -34,6 +35,7 @@ export function DesignServiceContent() {
           packageTitle: "Digitra design packages",
           packageEyebrow: "Pricing & Services",
           faqEyebrow: "Design FAQ",
+          learnMore: "Learn more",
           ctaEyebrow: "Brand Visual",
           ctaTitle: "Need professional designs that are ready to use?",
           ctaDescription:
@@ -112,28 +114,44 @@ export function DesignServiceContent() {
           </div>
 
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
-            {designPackages.map((group) => (
-              <article
-                className="flex h-full flex-col rounded-lg border border-border bg-card p-6"
-                key={group.title}
-              >
-                <p className="text-2xl font-semibold">{group.title}</p>
-                <ul className="mt-5 flex-1 space-y-3 text-sm leading-7 text-muted">
-                  {group.packages.map((item) => (
-                    <li className="border-t border-border pt-3" key={item}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <WhatsAppCta
-                  className="mt-8 h-11 px-4"
-                  href={whatsappLink(group.title, language)}
-                  tone="outline"
+            {designPackages.map((group) => {
+              const isSocmed = group.title
+                .toLowerCase()
+                .includes("social media");
+
+              return (
+                <article
+                  className="flex h-full flex-col rounded-lg border border-border bg-card p-6"
+                  key={group.title}
                 >
-                  {copy.whatsapp.askPackage}
-                </WhatsAppCta>
-              </article>
-            ))}
+                  <p className="text-2xl font-semibold">{group.title}</p>
+                  <ul className="mt-5 flex-1 space-y-3 text-sm leading-7 text-muted">
+                    {group.packages.map((item) => (
+                      <li className="border-t border-border pt-3" key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    {isSocmed ? (
+                      <Link
+                        className="inline-flex h-11 items-center justify-center rounded-full bg-accent px-4 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+                        href="/services/socmed"
+                      >
+                        {labels.learnMore}
+                      </Link>
+                    ) : null}
+                    <WhatsAppCta
+                      className="h-11 px-4"
+                      href={whatsappLink(group.title, language)}
+                      tone="outline"
+                    >
+                      {copy.whatsapp.askPackage}
+                    </WhatsAppCta>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

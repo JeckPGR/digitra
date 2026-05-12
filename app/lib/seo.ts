@@ -25,6 +25,7 @@ export const sitemapRoutes: SitemapRoute[] = [
     priority: 0.8,
   },
   { path: "/services/designs", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/services/socmed", changeFrequency: "monthly", priority: 0.8 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
 ];
 

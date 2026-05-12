@@ -15,20 +15,53 @@ type ServiceDetailContentProps = {
 };
 
 const CATEGORY_COLORS: Record<string, { badge: string; bar: string }> = {
-  Retail:   { badge: "bg-orange-500/15 text-orange-400 border-orange-500/30", bar: "bg-orange-400" },
-  Reseller: { badge: "bg-violet-500/15 text-violet-400 border-violet-500/30", bar: "bg-violet-400" },
-  "F&B":    { badge: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30", bar: "bg-emerald-400" },
-  HR:       { badge: "bg-sky-500/15 text-sky-400 border-sky-500/30", bar: "bg-sky-400" },
-  default:  { badge: "bg-accent/15 text-accent border-accent/30", bar: "bg-accent" },
+  Retail: {
+    badge: "border-orange-500/30 bg-orange-500/15 text-orange-400",
+    bar: "bg-orange-400",
+  },
+  Reseller: {
+    badge: "border-violet-500/30 bg-violet-500/15 text-violet-400",
+    bar: "bg-violet-400",
+  },
+  "F&B": {
+    badge: "border-emerald-500/30 bg-emerald-500/15 text-emerald-400",
+    bar: "bg-emerald-400",
+  },
+  HR: {
+    badge: "border-sky-500/30 bg-sky-500/15 text-sky-400",
+    bar: "bg-sky-400",
+  },
+  "Company Profile": {
+    badge: "border-amber-500/30 bg-amber-500/15 text-amber-300",
+    bar: "bg-amber-300",
+  },
+  "Booking App": {
+    badge: "border-cyan-500/30 bg-cyan-500/15 text-cyan-300",
+    bar: "bg-cyan-300",
+  },
+  "Landing Page": {
+    badge: "border-lime-500/30 bg-lime-500/15 text-lime-300",
+    bar: "bg-lime-300",
+  },
+  default: {
+    badge: "border-accent/30 bg-accent/15 text-accent",
+    bar: "bg-accent",
+  },
 };
 
-// Assign a category label per showcase title — extend as needed
 function inferCategory(title: string): string {
+  if (/company|profile|charcoal/i.test(title)) return "Company Profile";
+  if (/booking|barber|paja/i.test(title)) return "Booking App";
+  if (/landing|tani/i.test(title)) return "Landing Page";
   if (/fashion|retail|pos/i.test(title)) return "Retail";
   if (/reseller/i.test(title)) return "Reseller";
   if (/f&b|fnb|food|resto/i.test(title)) return "F&B";
   if (/job|hr|rekrut/i.test(title)) return "HR";
   return "default";
+}
+
+function getShowcaseCategory(item: Readonly<{ title: string; badge?: string }>) {
+  return item.badge ?? inferCategory(item.title);
 }
 
 export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
@@ -45,7 +78,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           back: "Kembali ke Services",
           overview: "Ringkasan layanan",
           media: "Area visual",
-          includes: "Apa saja yang dibahas",
+          includes: "Apa yang kami kerjakan",
           exampleTitle: isGas ? "Showcase aplikasi GAS" : "Showcase website",
           packageTitle: isGas ? "Format pengerjaan" : "Paket awal",
           ctaEyebrow: "Custom System",
@@ -60,7 +93,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
           back: "Back to Services",
           overview: "Service overview",
           media: "Visual area",
-          includes: "What this covers",
+          includes: "Our Work",
           exampleTitle: isGas ? "GAS app showcase" : "Website showcase",
           packageTitle: isGas ? "Work format" : "Starter packages",
           ctaEyebrow: "Custom System",
@@ -123,7 +156,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
             }`}
           >
             {showcaseItems.map((item) => {
-              const cat = inferCategory(item.title);
+              const cat = getShowcaseCategory(item);
               const colors = CATEGORY_COLORS[cat] ?? CATEGORY_COLORS.default;
               return (
                 <article
@@ -133,10 +166,20 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
                   {/* Image area */}
                   <div className="relative aspect-[16/10] overflow-hidden border-b border-border/70 bg-[radial-gradient(circle_at_50%_30%,rgba(255,140,97,0.14),transparent_46%),linear-gradient(135deg,rgba(249,249,249,0.045),rgba(37,211,102,0.055))]">
                     {item.image ? (
-                      <div className="absolute inset-3 sm:inset-4">
+                      <div
+                        className={
+                          isGas
+                            ? "absolute inset-3 sm:inset-4"
+                            : "absolute inset-0"
+                        }
+                      >
                         <Image
-                          alt={`${item.title} mockup`}
-                          className="object-contain object-bottom drop-shadow-[0_18px_36px_rgba(0,0,0,0.28)] transition duration-500 group-hover:scale-[1.025]"
+                          alt={`${item.title} showcase`}
+                          className={`drop-shadow-[0_18px_36px_rgba(0,0,0,0.28)] transition duration-500 group-hover:scale-[1.025] ${
+                            isGas
+                              ? "object-contain object-bottom"
+                              : "object-cover object-top"
+                          }`}
                           fill
                           sizes={
                             isGas

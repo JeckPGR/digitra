@@ -35,19 +35,19 @@ export const siteCopy = {
       light: "Terang",
     },
     navLinks: [
-      { href: "/", label: "Home" },
-      { href: "/services", label: "Services" },
-      { href: "/contact", label: "Contact" },
+      { href: "/", label: "Beranda" },
+      { href: "/services", label: "Layanan" },
+      { href: "/contact", label: "Kontak" },
     ],
     whatsapp: {
       defaultTopic: "konsultasi website",
       newBriefTopic: "brief proyek baru",
-      startProjectLabel: "Start project on WhatsApp",
-      chatUs: "Chat Us",
+      startProjectLabel: "Mulai proyek di WhatsApp",
+      chatUs: "Chat Kami",
       chatWhatsApp: "Hubungi Kami",
       packageWebsite: "WhatsApp Paket Website",
       customGas: "Custom GAS",
-      askPackage: "Tanya Paket",
+      askPackage: "Diskusikan Kebutuhan Anda",
       consultViaWhatsApp: "Konsultasi via WhatsApp",
       openWhatsApp: "Hubungi via WhatsApp",
     },
@@ -258,7 +258,7 @@ export const siteCopy = {
         title: "GAS Web Business Application",
         description:
           "Sistem berbasis Google Apps Script untuk workflow, laporan, dashboard, approval, dan proses operasional yang sering berulang.",
-        learnMore: "Pelajari lebih detail",
+        learnMore: "Pelajari lebih Lanjut",
         detail: {
           eyebrow: "Detail GAS Automation",
           title: "Kerangka sistem operasional yang bisa disesuaikan.",
@@ -298,7 +298,7 @@ export const siteCopy = {
         title: "Company Profile & Landing Page",
         description:
           "Website profesional untuk memperkenalkan bisnis, menjelaskan penawaran, dan mengarahkan calon klien pembelian.",
-        learnMore: "Pelajari selengkapnya",
+        learnMore: "Pelajari Lebih Lanjut",
         topic: "paket Company Profile dan Landing Page",
         detail: {
           eyebrow: "Detail Website",
@@ -392,16 +392,19 @@ export const siteCopy = {
     ],
     websiteShowcases: [
       {
-        title: "Landing Page Showcase 01",
-        image: "",
+        title: "Charcoal Pro Company Profile",
+        badge: "Company Profile",
+        image: "/lancom/CharcoalPro-CompanyProfile.png",
       },
       {
-        title: "Landing Page Showcase 02",
-        image: "",
+        title: "Paja Barbershop Booking App",
+        badge: "Booking App",
+        image: "/lancom/PajaBarbershop-BookingApp.png",
       },
       {
-        title: "Landing Page Showcase 03",
-        image: "",
+        title: "Tani Premium Landing Page",
+        badge: "Landing Page",
+        image: "/lancom/TaniPremium.Landing.png",
       },
     ],
     designPackages: [
@@ -573,10 +576,10 @@ export const siteCopy = {
       newBriefTopic: "new project brief",
       startProjectLabel: "Start project on WhatsApp",
       chatUs: "Chat Us",
-      chatWhatsApp: "Hubungi Kami ",
+      chatWhatsApp: "Contact Us",
       packageWebsite: "WhatsApp Website Package",
       customGas: "Custom GAS",
-      askPackage: "Ask Package",
+      askPackage: "Discuss Your Needs",
       consultViaWhatsApp: "Consult via WhatsApp",
       openWhatsApp: "Open WhatsApp",
     },
@@ -787,7 +790,7 @@ export const siteCopy = {
         title: "GAS Web Business Application",
         description:
           "Google Apps Script based systems for workflows, reports, dashboards, approvals, and recurring operational processes.",
-        learnMore: "Learn more details",
+        learnMore: "Learn more",
         detail: {
           eyebrow: "GAS Automation Detail",
           title: "An operational system framework that can be customized.",
@@ -929,16 +932,19 @@ export const siteCopy = {
     ],
     websiteShowcases: [
       {
-        title: "Landing Page Showcase 01",
-        image: "",
+        title: "Charcoal Pro Company Profile",
+        badge: "Company Profile",
+        image: "/lancom/CharcoalPro-CompanyProfile.png",
       },
       {
-        title: "Landing Page Showcase 02",
-        image: "",
+        title: "Paja Barbershop Booking App",
+        badge: "Booking App",
+        image: "/lancom/PajaBarbershop-BookingApp.png",
       },
       {
-        title: "Landing Page Showcase 03",
-        image: "",
+        title: "Tani Premium Landing Page",
+        badge: "Landing Page",
+        image: "/lancom/TaniPremium.Landing.png",
       },
     ],
     designPackages: [

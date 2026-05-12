@@ -5,69 +5,190 @@
 
   --font-geist-sans: Arial, Helvetica, sans-serif;
   --font-geist-mono: "Courier New", Courier, monospace;
-  --surface: #241f51;
-  --surface-foreground: #f9f9f9;
-  --foreground: #f9f9f9;
-  --card: #302968;
-  --card-foreground: #f9f9f9;
-  --panel: #f9f9f9;
-  --panel-foreground: #241f51;
-  --accent: #ff8c61;
-  --accent-strong: #ff6b35;
-  --accent-foreground: #241f51;
+
+  /* =========================
+     BRAND TOKENS
+     Inspired by Tailwind dark docs
+     ========================= */
+
+  /* Primary - Deep Navy / Almost Black */
+  --primary: #020617;
+  --primary-soft: #0f172a;
+  --primary-strong: #01040d;
+  --primary-foreground: #f8fafc;
+
+  /* Secondary - Slate / Elevated Surface */
+  --secondary: #111827;
+  --secondary-soft: #1e293b;
+  --secondary-strong: #0b1120;
+  --secondary-foreground: #e5e7eb;
+
+  /* Accent - Tailwind Sky / Cyan */
+  --accent: #38bdf8;
+  --accent-strong: #0ea5e9;
+  --accent-soft: #7dd3fc;
+  --accent-foreground: #020617;
+
+  /* Neutral */
+  --white: #f8fafc;
+  --white-strong: #ffffff;
+
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Status */
   --whatsapp: #25d366;
   --whatsapp-strong: #1fbd5a;
   --whatsapp-foreground: #ffffff;
-  --muted: #d6d0ef;
-  --muted-dark: #6a628f;
-  --border: rgba(249, 249, 249, 0.16);
-  --border-dark: rgba(36, 31, 81, 0.16);
+
+  /* =========================
+     SEMANTIC TOKENS
+     DARK MODE DEFAULT
+     ========================= */
+
+  /* Main background */
+  --surface: #020617;
+  --surface-foreground: #f8fafc;
+  --foreground: #f8fafc;
+
+  /* Card / elevated section */
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+
+  /* Panel / code block / inner elevated area */
+  --panel: #111827;
+  --panel-foreground: #e5e7eb;
+
+  /* Brand semantic */
+  --primary-color: var(--primary);
+  --primary-color-foreground: var(--primary-foreground);
+
+  --secondary-color: var(--secondary-soft);
+  --secondary-color-foreground: var(--secondary-foreground);
+
+  --accent-color: var(--accent);
+  --accent-color-foreground: var(--accent-foreground);
+
+  /* Text */
+  --muted: #cbd5e1;
+  --muted-dark: #94a3b8;
+  --muted-foreground: #94a3b8;
+
+  /* Borders */
+  --border: rgba(148, 163, 184, 0.18);
+  --border-dark: rgba(248, 250, 252, 0.1);
+
+  /* Effects */
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.28);
+  --ring: rgba(56, 189, 248, 0.42);
 }
+
+/* =========================
+   TAILWIND THEME TOKENS
+   ========================= */
 
 @theme inline {
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
   --color-panel: var(--panel);
   --color-panel-foreground: var(--panel-foreground);
-  --color-accent: var(--accent);
+
+  --color-primary: var(--primary-color);
+  --color-primary-foreground: var(--primary-color-foreground);
+
+  --color-secondary: var(--secondary-color);
+  --color-secondary-foreground: var(--secondary-color-foreground);
+
+  --color-accent: var(--accent-color);
   --color-accent-strong: var(--accent-strong);
-  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-color-foreground);
+
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-strong: var(--whatsapp-strong);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
+
   --color-muted: var(--muted);
   --color-muted-dark: var(--muted-dark);
+  --color-muted-foreground: var(--muted-foreground);
+
   --color-border: var(--border);
   --color-border-dark: var(--border-dark);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+/* =========================
+   LIGHT MODE
+   Reverted from dark mode
+   ========================= */
 
 .light,
 [data-theme="light"] {
   color-scheme: light;
 
-  --surface: #f9f9f9;
-  --surface-foreground: #241f51;
-  --foreground: #241f51;
+  /* Main background */
+  --surface: #f8fafc;
+  --surface-foreground: #020617;
+  --foreground: #020617;
+
+  /* Card / elevated section */
   --card: #ffffff;
-  --card-foreground: #241f51;
-  --panel: #241f51;
-  --panel-foreground: #f9f9f9;
-  --accent: #ff6b35;
-  --accent-strong: #ff6b35;
+  --card-foreground: #020617;
+
+  /* Panel is reversed: dark panel on light mode */
+  --panel: #020617;
+  --panel-foreground: #f8fafc;
+
+  /* Brand semantic */
+  --primary-color: #020617;
+  --primary-color-foreground: #f8fafc;
+
+  --secondary-color: #1e293b;
+  --secondary-color-foreground: #f8fafc;
+
+  /* Accent darker on light mode for better contrast */
+  --accent-color: #0284c7;
+  --accent: #0284c7;
+  --accent-strong: #0369a1;
+  --accent-soft: #dbeafe;
+  --accent-color-foreground: #ffffff;
   --accent-foreground: #ffffff;
-  --whatsapp: #25d366;
-  --whatsapp-strong: #1fbd5a;
-  --whatsapp-foreground: #ffffff;
-  --muted: #5c5877;
-  --muted-dark: #c9c5df;
-  --border: rgba(36, 31, 81, 0.16);
-  --border-dark: rgba(249, 249, 249, 0.16);
+
+  /* Text */
+  --muted: #475569;
+  --muted-dark: #94a3b8;
+  --muted-foreground: #64748b;
+
+  /* Borders */
+  --border: rgba(15, 23, 42, 0.12);
+  --border-dark: rgba(248, 250, 252, 0.16);
+
+  /* Effects */
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+  --shadow-card: 0 12px 32px rgba(15, 23, 42, 0.1);
+  --ring: rgba(2, 132, 199, 0.32);
 }
+
+/* =========================
+   BASE
+   ========================= */
 
 * {
   box-sizing: border-box;
@@ -84,7 +205,100 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+/* =========================
+   SELECTION
+   ========================= */
+
 ::selection {
   background: var(--accent);
   color: var(--accent-foreground);
+}
+
+/* =========================
+   NICE DEFAULTS
+   ========================= */
+
+a {
+  color: var(--accent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--accent-soft);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   OPTIONAL UTILITY CLASSES
+   ========================= */
+
+.bg-surface {
+  background: var(--surface);
+  color: var(--surface-foreground);
+}
+
+.bg-card {
+  background: var(--card);
+  color: var(--card-foreground);
+}
+
+.bg-panel {
+  background: var(--panel);
+  color: var(--panel-foreground);
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: var(--primary-color-foreground);
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: var(--secondary-color-foreground);
+}
+
+.bg-accent {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.border-default {
+  border-color: var(--border);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.focus-ring {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
 }

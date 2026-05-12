@@ -21,6 +21,8 @@ export function ServicesContent() {
     whatsapp,
     workflowSteps,
   } = copy;
+  const learnMoreLabel =
+    language === "id" ? "Pelajari Lebih Lanjut" : "Learn more";
 
   return (
     <main className="page-transition flex-1 bg-surface text-surface-foreground">
@@ -61,7 +63,7 @@ export function ServicesContent() {
                 {servicesPage.gas.description}
               </p>
               <Link
-                className="mt-6 inline-flex h-11 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-accent-foreground"
+                className="mt-6 hidden h-11 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-accent-foreground lg:inline-flex"
                 href="/services/gas"
               >
                 {servicesPage.gas.learnMore}
@@ -90,6 +92,12 @@ export function ServicesContent() {
               ))}
             </div>
           </div>
+          <Link
+            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full border border-accent px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-accent-foreground lg:hidden"
+            href="/services/gas"
+          >
+            {servicesPage.gas.learnMore}
+          </Link>
         </div>
       </section>
 
@@ -113,7 +121,7 @@ export function ServicesContent() {
                 {servicesPage.website.description}
               </p>
               <Link
-                className="mt-5 inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+                className="mt-5 hidden h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:inline-flex"
                 href="/services/company-profile-landing-page"
               >
                 {servicesPage.website.learnMore}
@@ -125,6 +133,12 @@ export function ServicesContent() {
             companyProfilePackages={companyProfilePackages}
             landingPackages={landingPackages}
           />
+          <Link
+            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:hidden"
+            href="/services/company-profile-landing-page"
+          >
+            {servicesPage.website.learnMore}
+          </Link>
         </div>
       </section>
 
@@ -134,16 +148,24 @@ export function ServicesContent() {
       >
         <PageDecor align="right" tone="services" />
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="text-base font-semibold text-accent">
-              {servicesPage.design.eyebrow}
-            </p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-              {servicesPage.design.title}
-            </h2>
-            <p className="mt-5 text-sm leading-7 text-muted">
-              {servicesPage.design.description}
-            </p>
+          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="max-w-3xl">
+              <p className="text-base font-semibold text-accent">
+                {servicesPage.design.eyebrow}
+              </p>
+              <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
+                {servicesPage.design.title}
+              </h2>
+              <p className="mt-5 text-sm leading-7 text-muted">
+                {servicesPage.design.description}
+              </p>
+            </div>
+            <Link
+              className="hidden h-11 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:inline-flex"
+              href="/services/socmed"
+            >
+              {learnMoreLabel}
+            </Link>
           </div>
 
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
@@ -170,6 +192,12 @@ export function ServicesContent() {
               </article>
             ))}
           </div>
+          <Link
+            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:hidden"
+            href="/services/socmed"
+          >
+            {learnMoreLabel}
+          </Link>
         </div>
       </section>
 

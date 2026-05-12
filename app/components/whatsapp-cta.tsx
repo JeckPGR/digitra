@@ -31,7 +31,7 @@ export function WhatsAppCta({
       target="_blank"
       {...props}
     >
-      <WhatsAppIcon />
+
       {children}
     </a>
   );

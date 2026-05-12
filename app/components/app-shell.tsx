@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { siteConfig, whatsappLink } from "../lib/site";
 import { LanguageSwitcher } from "./language-switcher";
@@ -12,6 +13,7 @@ import { useTheme } from "./theme-provider";
 import { WhatsAppCta, WhatsAppIcon } from "./whatsapp-cta";
 
 export function AppShell({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
   const { copy, language } = useLanguage();
   const { navLinks, site, whatsapp } = copy;
   // Ubah ukuran logo di sini jika ingin menyesuaikan tinggi/lebar.
@@ -42,15 +44,27 @@ export function AppShell({ children }: { children: ReactNode }) {
           </Link>
 
           <nav className="flex items-center gap-2 rounded-full border border-border bg-card/70 p-1 text-sm text-muted">
-            {navLinks.map((link) => (
-              <Link
-                className="rounded-full px-4 py-2 transition hover:bg-accent hover:text-accent-foreground"
-                href={link.href}
-                key={link.href}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+
+              return (
+                <Link
+                  aria-current={active ? "page" : undefined}
+                  className={`rounded-full px-4 py-2 font-semibold transition ${
+                    active
+                      ? "bg-accent text-accent-foreground shadow-[0_12px_30px_rgba(255,140,97,0.22)]"
+                      : "text-muted hover:bg-accent/10 hover:text-card-foreground"
+                  }`}
+                  href={link.href}
+                  key={link.href}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-1 rounded-full border border-border bg-card/70 p-1">
@@ -63,13 +77,14 @@ export function AppShell({ children }: { children: ReactNode }) {
       {children}
 
       <a
-        className="fixed bottom-8 right-8 z-50 hidden h-14 items-center justify-center gap-2 rounded-full bg-[#25d366] px-6 text-sm font-semibold text-white shadow-[0_22px_60px_rgba(37,211,102,0.32)] transition hover:bg-[#1fbd5a] lg:inline-flex"
+        aria-label={whatsapp.chatWhatsApp}
+        className="fixed bottom-8 right-8 z-50 hidden h-16 w-16 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-[0_22px_60px_rgba(37,211,102,0.32)] transition hover:-translate-y-1 hover:bg-whatsapp-strong lg:inline-flex"
         href={whatsappLink(whatsapp.defaultTopic, language)}
         rel="noreferrer"
         target="_blank"
+        title={whatsapp.chatWhatsApp}
       >
-        <WhatsAppIcon />
-        {whatsapp.chatUs}
+        <WhatsAppIcon className="h-7 w-7 shrink-0" />
       </a>
 
       <footer className="bg-surface pb-10 pt-10 text-surface-foreground sm:px-8 lg:px-10">
