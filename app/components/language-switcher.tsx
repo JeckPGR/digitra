@@ -49,7 +49,7 @@ export function LanguageSwitcher({ compact = false }: LanguageSwitcherProps) {
       </button>
 
       {open ? (
-        <div className="absolute right-0 top-12 z-50 w-40 space-y-1 rounded-lg border border-border bg-card p-2 shadow-[0_22px_70px_rgba(0,0,0,0.22)]">
+        <div className="absolute right-0 top-12 z-50 w-40 space-y-1 rounded-lg border border-border bg-card p-2 shadow-popover">
           {languages.map((item) => (
             <button
               className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm transition ${

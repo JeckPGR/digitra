@@ -75,7 +75,7 @@ export function ContactContent() {
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {serviceHighlights.map((service) => (
               <a
-                className="flex h-full flex-col rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground shadow-[0_18px_50px_rgba(36,31,81,0.08)] transition hover:-translate-y-1 hover:border-whatsapp"
+                className="flex h-full flex-col rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground shadow-card transition hover:-translate-y-1 hover:border-whatsapp"
                 href={whatsappLink(service.title, language)}
                 key={service.title}
                 rel="noreferrer"

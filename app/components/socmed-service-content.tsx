@@ -147,7 +147,7 @@ export function SocmedServiceContent() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
                 {labels.lockupLabel}
               </p>
-              <span className="h-2 w-2 rounded-full bg-whatsapp shadow-[0_0_22px_rgba(37,211,102,0.72)]" />
+              <span className="h-2 w-2 rounded-full bg-whatsapp shadow-glow" />
             </div>
             <CollabLogo />
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -273,7 +273,7 @@ function ShowcaseCard({
   item: (typeof showcaseCards)[number];
 }) {
   return (
-    <article className="w-[250px] shrink-0 overflow-hidden rounded-lg border border-border bg-card shadow-[0_18px_48px_rgba(0,0,0,0.16)] sm:w-[300px]">
+    <article className="w-[250px] shrink-0 overflow-hidden rounded-lg border border-border bg-card shadow-card sm:w-[300px]">
       <div className={`h-36 bg-gradient-to-br ${item.accent} p-4`}>
         <div className="flex h-full flex-col justify-between rounded-md bg-surface/25 p-4 backdrop-blur-sm">
           <span className="w-fit rounded-full bg-surface/70 px-3 py-1 text-xs font-semibold text-surface-foreground">

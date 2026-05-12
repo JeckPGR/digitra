@@ -90,6 +90,12 @@
   /* Effects */
   --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.35);
   --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.28);
+  --shadow-accent: 0 12px 30px rgba(56, 189, 248, 0.22);
+  --shadow-floating: 0 -16px 46px rgba(0, 0, 0, 0.18);
+  --shadow-glow: 0 0 22px rgba(37, 211, 102, 0.72);
+  --shadow-popover: 0 22px 70px rgba(0, 0, 0, 0.22);
+  --shadow-whatsapp: 0 22px 60px rgba(37, 211, 102, 0.32);
+  --drop-shadow-card: 0 18px 36px rgba(0, 0, 0, 0.28);
   --ring: rgba(56, 189, 248, 0.42);
 }
 
@@ -183,6 +189,12 @@
   /* Effects */
   --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
   --shadow-card: 0 12px 32px rgba(15, 23, 42, 0.1);
+  --shadow-accent: 0 12px 30px rgba(2, 132, 199, 0.2);
+  --shadow-floating: 0 -16px 46px rgba(15, 23, 42, 0.1);
+  --shadow-glow: 0 0 22px rgba(37, 211, 102, 0.55);
+  --shadow-popover: 0 22px 70px rgba(15, 23, 42, 0.16);
+  --shadow-whatsapp: 0 22px 60px rgba(37, 211, 102, 0.24);
+  --drop-shadow-card: 0 18px 36px rgba(15, 23, 42, 0.2);
   --ring: rgba(2, 132, 199, 0.32);
 }
 
@@ -298,7 +310,392 @@ hr {
   box-shadow: var(--shadow-card);
 }
 
+.shadow-accent {
+  box-shadow: var(--shadow-accent);
+}
+
+.shadow-floating {
+  box-shadow: var(--shadow-floating);
+}
+
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.shadow-popover {
+  box-shadow: var(--shadow-popover);
+}
+
+.shadow-whatsapp {
+  box-shadow: var(--shadow-whatsapp);
+}
+
+.drop-shadow-card {
+  filter: drop-shadow(var(--drop-shadow-card));
+}
+
+.hover-shadow-card:hover {
+  box-shadow: var(--shadow-card);
+}
+
 .focus-ring {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
+}
+
+.work-carousel-track,
+.socmed-carousel-track {
+  animation: horizontal-marquee 42s linear infinite;
+}
+
+.work-carousel-track-top {
+  animation-direction: normal;
+}
+
+.work-carousel-track-bottom {
+  animation-direction: reverse;
+  animation-duration: 48s;
+}
+
+.socmed-carousel-track {
+  animation-duration: 34s;
+}
+
+.socmed-carousel-track[data-direction="reverse"] {
+  animation-direction: reverse;
+}
+
+.socmed-carousel:hover .socmed-carousel-track {
+  animation-play-state: paused;
+}
+
+.socmed-glow {
+  isolation: isolate;
+}
+
+.socmed-glow::before {
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg, rgba(56, 189, 248, 0.28), rgba(37, 211, 102, 0.16)),
+    linear-gradient(240deg, rgba(125, 211, 252, 0.16), transparent 52%);
+  content: "";
+  filter: blur(16px);
+  opacity: 0.55;
+  animation: soft-glow-pulse 4.8s ease-in-out infinite;
+}
+
+/* ─── Backdrop ──────────────────────────────────────────────────────────── */
+.pim-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Richer multi-layer backdrop */
+  background: radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      rgba(0, 0, 0, 0.55) 0%,
+      transparent 100%
+    ),
+    rgba(8, 8, 12, 0.82);
+  backdrop-filter: blur(20px) saturate(0.7);
+  -webkit-backdrop-filter: blur(20px) saturate(0.7);
+
+  padding: 1.5rem;
+  animation: pim-backdrop-in 200ms ease-out both;
+}
+
+/* ─── Grain overlay ─────────────────────────────────────────────────────── */
+.pim-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px;
+}
+
+/* ─── Panel ─────────────────────────────────────────────────────────────── */
+.pim-panel {
+  position: relative;
+  z-index: 1;
+
+  /* Adaptive sizing — panel grows with image up to viewport limits */
+  width: min(92vw, 1100px);
+  max-height: min(90vh, 900px);
+  display: flex;
+  flex-direction: column;
+
+  /* Refined card surface */
+  background: rgba(14, 14, 18, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 6px;
+  box-shadow:
+    0 0 0 0.5px rgba(0, 0, 0, 0.5),
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  animation: pim-panel-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Close button ──────────────────────────────────────────────────────── */
+.pim-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 10;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(22, 22, 28, 0.92);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+
+  animation: pim-close-pop 380ms cubic-bezier(0.34, 1.56, 0.64, 1) 120ms both;
+}
+
+.pim-close:hover {
+  background: rgba(240, 60, 60, 0.9);
+  border-color: rgba(255, 100, 100, 0.4);
+  color: #fff;
+  transform: scale(1.1) rotate(90deg);
+  box-shadow:
+    0 6px 20px rgba(220, 40, 40, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.pim-close:active {
+  transform: scale(0.96) rotate(90deg);
+}
+
+.pim-close:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* ─── Image wrapper ─────────────────────────────────────────────────────── */
+.pim-image-wrap {
+  position: relative;
+
+  /* 
+    The key trick: we set a max-width/max-height to constrain the container,
+    then let the aspect-ratio property fit the image naturally.
+    The image itself uses object-fit: contain so no cropping ever occurs.
+  */
+  width: 100%;
+  flex: 1;
+  min-height: 200px;
+  overflow: hidden;
+  border-radius: 13px;
+
+  /* Subtle inner border for depth */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* ─── The image itself ──────────────────────────────────────────────────── */
+.pim-image {
+  object-fit: contain !important;
+  animation: pim-image-float 5.5s ease-in-out 320ms infinite;
+}
+
+/* ─── Bottom vignette ───────────────────────────────────────────────────── */
+.pim-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 100% 40% at 50% 100%,
+    rgba(0, 0, 0, 0.18) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ─── Caption bar ───────────────────────────────────────────────────────── */
+.pim-caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px 6px;
+  animation: pim-caption-in 420ms cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+}
+
+.pim-caption-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  flex-shrink: 0;
+}
+
+.pim-caption-text {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.38);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ─── Keyframes ─────────────────────────────────────────────────────────── */
+@keyframes pim-backdrop-in {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px) saturate(1);
+    -webkit-backdrop-filter: blur(0px) saturate(1);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(20px) saturate(0.7);
+    -webkit-backdrop-filter: blur(20px) saturate(0.7);
+  }
+}
+
+@keyframes pim-panel-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0) scale(0.93);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes pim-close-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pim-caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pim-image-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0) scale(1.006);
+  }
+}
+
+.product-modal-backdrop {
+  animation: product-modal-fade-in 180ms ease-out both;
+}
+
+.product-modal-panel {
+  animation: product-modal-rise-in 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.product-modal-image {
+  animation: product-modal-float 4.8s ease-in-out 260ms infinite;
+}
+
+@keyframes horizontal-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes soft-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.36;
+  }
+
+  50% {
+    opacity: 0.68;
+  }
+}
+
+@keyframes product-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes product-modal-rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes product-modal-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0) scale(1.008);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-carousel-track,
+  .socmed-carousel-track,
+  .socmed-glow::before,
+  .product-modal-backdrop,
+  .product-modal-panel,
+  .product-modal-image {
+    animation: none;
+  }
 }

@@ -19,7 +19,7 @@ export function MobileBottomNav() {
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 px-4 pb-[calc(env(safe-area-inset-bottom)+1rem)] lg:hidden">
-      <div className="mx-auto grid max-w-md grid-cols-4 gap-2 rounded-full border border-border bg-card/95 p-1.5 shadow-[0_-16px_46px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+      <div className="mx-auto grid max-w-md grid-cols-4 gap-2 rounded-full border border-border bg-card/95 p-1.5 shadow-floating backdrop-blur-xl">
         {navLinks.map((link) => {
           const active =
             link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);

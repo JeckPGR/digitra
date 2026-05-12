@@ -6,6 +6,7 @@ import { whatsappLink } from "../lib/site";
 import { CtaPanel } from "./cta-panel";
 import { useLanguage } from "./language-provider";
 import { PageDecor } from "./page-decor";
+import { ProductImageModal } from "./product-image-modal";
 import { WhatsAppCta } from "./whatsapp-cta";
 
 type DetailKind = "gas" | "website";
@@ -161,35 +162,41 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
               return (
                 <article
                   key={item.title}
-                  className="group isolate overflow-hidden rounded-xl border border-border bg-card transition duration-300 hover:-translate-y-1.5 hover:border-accent hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
+                  className="group isolate overflow-hidden rounded-xl border border-border bg-card transition duration-300 hover-shadow-card hover:-translate-y-1.5 hover:border-accent"
                 >
                   {/* Image area */}
-                  <div className="relative aspect-[16/10] overflow-hidden border-b border-border/70 bg-[radial-gradient(circle_at_50%_30%,rgba(255,140,97,0.14),transparent_46%),linear-gradient(135deg,rgba(249,249,249,0.045),rgba(37,211,102,0.055))]">
+                  <div className="relative aspect-16/10 overflow-hidden border-b border-border/70 bg-[radial-gradient(circle_at_50%_30%,rgba(255,140,97,0.14),transparent_46%),linear-gradient(135deg,rgba(249,249,249,0.045),rgba(37,211,102,0.055))]">
                     {item.image ? (
-                      <div
-                        className={
-                          isGas
-                            ? "absolute inset-3 sm:inset-4"
-                            : "absolute inset-0"
-                        }
+                      <ProductImageModal
+                        alt={`${item.title} showcase`}
+                        className="absolute inset-0 block cursor-zoom-in border-0 bg-transparent p-0 text-left"
+                        src={item.image}
                       >
-                        <Image
-                          alt={`${item.title} showcase`}
-                          className={`drop-shadow-[0_18px_36px_rgba(0,0,0,0.28)] transition duration-500 group-hover:scale-[1.025] ${
+                        <div
+                          className={
                             isGas
-                              ? "object-contain object-bottom"
-                              : "object-cover object-top"
-                          }`}
-                          fill
-                          sizes={
-                            isGas
-                              ? "(min-width: 1280px) 640px, (min-width: 640px) 50vw, 100vw"
-                              : "(min-width: 1280px) 420px, (min-width: 640px) 50vw, 100vw"
+                              ? "absolute inset-3 sm:inset-4"
+                              : "absolute inset-0"
                           }
-                          src={item.image}
-                          unoptimized
-                        />
-                      </div>
+                        >
+                          <Image
+                            alt={`${item.title} showcase`}
+                            className={`drop-shadow-card transition duration-500 group-hover:scale-[1.025] ${
+                              isGas
+                                ? "object-contain object-bottom"
+                                : "object-cover object-top"
+                            }`}
+                            fill
+                            sizes={
+                              isGas
+                                ? "(min-width: 1280px) 640px, (min-width: 640px) 50vw, 100vw"
+                                : "(min-width: 1280px) 420px, (min-width: 640px) 50vw, 100vw"
+                            }
+                            src={item.image}
+                            unoptimized
+                          />
+                        </div>
+                      </ProductImageModal>
                     ) : (
                       /* Placeholder mockup */
                       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,255,117,0.10),rgba(255,255,255,0.03))] p-5">

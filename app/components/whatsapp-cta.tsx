@@ -13,10 +13,10 @@ export function WhatsAppCta({
 }: WhatsAppCtaProps) {
   const toneClass = {
     solid:
-      "bg-green-500 text-white hover:bg-green-600 shadow-[0_14px_34px_rgba(37,211,102,0.24)]",
+      "bg-whatsapp !text-white hover:bg-whatsapp-strong hover:!text-white shadow-whatsapp [&_*]:!text-white",
     outline:
-      "border border-green-500 text-green-500 hover:bg-green-500 hover:text-white",
-    text: "text-green-500 hover:text-green-600",
+      "border border-whatsapp text-whatsapp hover:bg-whatsapp hover:!text-white",
+    text: "text-whatsapp hover:text-whatsapp-strong",
   }[tone];
 
   const shapeClass =

@@ -57,7 +57,7 @@ export function PackageTabs({
             <button
               className={`rounded-full px-4 py-2 transition ${
                 activeTab === tab.key
-                  ? "bg-accent text-accent-foreground shadow-[0_12px_26px_rgba(255,107,53,0.22)]"
+                  ? "bg-accent text-accent-foreground shadow-accent"
                   : "hover:text-paper-foreground"
               }`}
               key={tab.key}

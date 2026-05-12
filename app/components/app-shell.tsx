@@ -55,7 +55,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                   aria-current={active ? "page" : undefined}
                   className={`rounded-full px-4 py-2 font-semibold transition ${
                     active
-                      ? "bg-accent text-accent-foreground shadow-[0_12px_30px_rgba(255,140,97,0.22)]"
+                      ? "bg-accent text-accent-foreground shadow-accent"
                       : "text-muted hover:bg-accent/10 hover:text-card-foreground"
                   }`}
                   href={link.href}
@@ -78,13 +78,13 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <a
         aria-label={whatsapp.chatWhatsApp}
-        className="fixed bottom-8 right-8 z-50 hidden h-16 w-16 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-[0_22px_60px_rgba(37,211,102,0.32)] transition hover:-translate-y-1 hover:bg-whatsapp-strong lg:inline-flex"
+        className="fixed bottom-8 right-8 z-50 hidden h-16 w-16 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-whatsapp transition hover:-translate-y-1 hover:bg-whatsapp-strong lg:inline-flex"
         href={whatsappLink(whatsapp.defaultTopic, language)}
         rel="noreferrer"
         target="_blank"
         title={whatsapp.chatWhatsApp}
       >
-        <WhatsAppIcon className="h-7 w-7 shrink-0" />
+        <WhatsAppIcon className="h-7 w-7 shrink-0 text-white"  />
       </a>
 
       <footer className="bg-surface pb-10 pt-10 text-surface-foreground sm:px-8 lg:px-10">

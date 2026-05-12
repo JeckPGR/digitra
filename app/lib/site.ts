@@ -64,7 +64,7 @@ export const siteCopy = {
         href: "/services/company-profile-landing-page",
         eyebrow: "Website",
         summary:
-          "Halaman profesional yang menjelaskan value bisnis, membangun trust, dan mengarahkan calon klien ke CTA.",
+          "Halaman profesional yang menjelaskan value bisnis, membangun trust, dan mengarahkan klien ke CTA.",
       },
       {
         title: "Design",
@@ -94,7 +94,7 @@ export const siteCopy = {
         eyebrow: "Yang Kami Kerjakan",
         title: "Dapatkan tim digital khusus dengan biaya yang lebih efisien.",
         description:
-          "Digitra membantu bisnis menyusun pesan, visual, dan sistem agar calon klien cepat paham apa yang Anda tawarkan. Kami menjaga proses tetap ramping: mulai dari kuisioner, pengumpulan materi, desain, development, sampai revisi yang terukur.",
+          "Kami membantu brand dan bisnis berkembang lewat website modern, aplikasi bisnis, serta desain visual yang tidak hanya menarik, tetapi juga efektif menyampaikan nilai bisnis Anda kepada klien.",
         items: [
           {
             title: "Scope jelas",
@@ -130,7 +130,7 @@ export const siteCopy = {
         items: [
           {
             quote:
-              "Digitra membantu kami mengubah brief yang masih kasar menjadi website yang jauh lebih jelas dan siap dikirim ke calon klien.",
+              "Digitra membantu kami mengubah brief yang masih kasar menjadi website yang jauh lebih jelas dan siap dikirim ke klien.",
             name: "Rafi Pradana",
             role: "Founder UMKM Kuliner",
           },
@@ -156,7 +156,7 @@ export const siteCopy = {
       closing: {
         title: "Kata jelas. Visual kuat. Trust meningkat.",
         description:
-          "Website yang bagus bukan cuma terlihat modern. Ia harus menjelaskan siapa Anda, layanan apa yang dijual, dan alasan calon klien perlu percaya dalam beberapa detik pertama.",
+          "Website yang bagus bukan cuma terlihat modern. Ia harus menjelaskan siapa Anda, layanan apa yang dijual, dan alasan klien perlu percaya dalam beberapa detik pertama.",
         cta: "Mulai bersama Digitra",
       },
       topics: {
@@ -250,7 +250,7 @@ export const siteCopy = {
         eyebrow: "Layanan Digitra",
         title: "Layanan digital sederhana untuk pertumbuhan bisnis yang serius.",
         description:
-          "Pilih layanan sesuai kebutuhan: website yang menjelaskan bisnis, sistem automation yang merapikan kerja internal, atau visual brand yang membuat komunikasi lebih konsisten.",
+          "Bangun fondasi digital bisnis Anda dengan layanan yang tepat: website profesional untuk menjelaskan bisnis, automation Google Apps Script untuk merapikan kerja internal, dan visual brand yang membuat bisnis tampil lebih konsisten, kredibel, dan mudah dipercaya.",
         chips: ["Web", "Automation", "Design"],
       },
       gas: {
@@ -297,7 +297,7 @@ export const siteCopy = {
         eyebrow: "02 / Website",
         title: "Company Profile & Landing Page",
         description:
-          "Website profesional untuk memperkenalkan bisnis, menjelaskan penawaran, dan mengarahkan calon klien pembelian.",
+          "Website profesional untuk memperkenalkan bisnis, menjelaskan penawaran, dan mengarahkan klien pembelian.",
         learnMore: "Pelajari Lebih Lanjut",
         topic: "paket Company Profile dan Landing Page",
         detail: {
@@ -375,19 +375,19 @@ export const siteCopy = {
     gasShowcases: [
       {
         title: "Fashion Retail POS",
-        image: "/GAS/BusinessFashion.png",
+        image: "/GAS/BusinessFashion-V2.png",
       },
       {
         title: "Digital Reseller App",
-        image: "/GAS/BusinessAppPremium.png",
+        image: "/GAS/BusinessAppPremium-V2.png",
       },
       {
         title: "F&B Business Management",
-        image: "/GAS/BusinessFnB.png",
+        image: "/GAS/BusinessFnB-V2.png",
       },
       {
         title: "Job Application System",
-        image: "/GAS/JobApplication.png",
+        image: "/GAS/JobApplication-V2.png",
       },
     ],
     websiteShowcases: [
@@ -491,7 +491,7 @@ export const siteCopy = {
           "Informasi ini akan mempercepat konsultasi dan membantu kami memberi rekomendasi paket yang pas.",
         items: [
           "Jenis layanan yang dibutuhkan",
-          "Target pengunjung atau calon klien",
+          "Target pengunjung atau klien",
           "Referensi website atau visual",
           "Materi yang sudah tersedia",
           "Target waktu pengerjaan",
@@ -626,7 +626,7 @@ export const siteCopy = {
         eyebrow: "What We Do",
         title: "Get a dedicated digital team at a fraction of the cost.",
         description:
-          "Digitra helps businesses structure their message, visuals, and systems so prospects quickly understand what you offer. We keep the process lean: from questionnaire, material collection, design, development, to focused revisions.",
+          "We help brands and businesses grow through modern websites, business applications, and visual designs that not only look great, but also communicate your value clearly to clients.",
         items: [
           {
             title: "Clear scope",
@@ -782,7 +782,7 @@ export const siteCopy = {
         eyebrow: "Digitra Services",
         title: "Simple digital services for serious business growth.",
         description:
-          "Choose services based on your needs: a website that explains your business, an automation system that cleans up internal work, or visual branding that makes communication more consistent.",
+          "Build the digital foundation of your business with the right services: a professional website to showcase your business, Google Apps Script automation to streamline internal operations, and a cohesive brand identity that makes your business appear more consistent, credible, and trustworthy.",
         chips: ["Web", "Automation", "Design"],
       },
       gas: {
@@ -915,19 +915,19 @@ export const siteCopy = {
     gasShowcases: [
       {
         title: "Fashion Retail POS",
-        image: "/GAS/BusinessFashion.png",
+        image: "/GAS/BusinessFashion-V2.png",
       },
       {
         title: "Digital Reseller App",
-        image: "/GAS/BusinessAppPremium.png",
+        image: "/GAS/BusinessAppPremium-V2.png",
       },
       {
         title: "F&B Business Management",
-        image: "/GAS/BusinessFnB.png",
+        image: "/GAS/BusinessFnB-V2.png",
       },
       {
         title: "Job Application System",
-        image: "/GAS/JobApplication.png",
+        image: "/GAS/JobApplication-V2.png",
       },
     ],
     websiteShowcases: [

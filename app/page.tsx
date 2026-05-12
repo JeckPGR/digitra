@@ -1,17 +1,112 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { CountUpNumber } from "./components/count-up-number";
 import { CtaPanel } from "./components/cta-panel";
 import { useLanguage } from "./components/language-provider";
 import { PageDecor } from "./components/page-decor";
+import { ProductImageModal } from "./components/product-image-modal";
 import { SmoothFaq } from "./components/smooth-faq";
 import { WhatsAppCta } from "./components/whatsapp-cta";
 import { whatsappLink } from "./lib/site";
 
+const workShowcases = [
+  {
+    title: "Charcoal Pro",
+    label: "Company Profile",
+    image: "/lancom/CharcoalPro-CompanyProfile.png",
+  },
+  {
+    title: "Paja Barbershop",
+    label: "Booking App",
+    image: "/lancom/PajaBarbershop-BookingApp.png",
+  },
+  {
+    title: "Tani Premium",
+    label: "Landing Page",
+    image: "/lancom/TaniPremium.Landing.png",
+  },
+  {
+    title: "Fashion Retail POS",
+    label: "GAS Automation",
+    image: "/GAS/BusinessFashion-V2.png",
+  },
+  {
+    title: "F&B Management",
+    label: "GAS Dashboard",
+    image: "/GAS/BusinessFnB-V2.png",
+  },
+  {
+    title: "Digital Reseller App",
+    label: "Business System",
+    image: "/GAS/BusinessAppPremium-V2.png",
+  },
+  {
+    title: "Job Application",
+    label: "Workflow System",
+    image: "/GAS/JobApplication-V2.png",
+  },
+];
+
+const designShowcases = [
+  {
+    title: "Brosur",
+    label: "Design",
+    image: "/Design/Brosur.jpeg",
+  },
+  {
+    title: "JWS Graphic",
+    label: "Design",
+    image: "/Design/DesignGrafis-JWS.jpeg",
+  },
+  {
+    title: "StudioIn Graphic",
+    label: "Design",
+    image: "/Design/DesignGrafis-StudioIn.jpeg",
+  },
+  {
+    title: "Bakery Logo",
+    label: "Logo",
+    image: "/Design/Logo-Bakery.jpeg",
+  },
+  {
+    title: "Fresh Laundry Logo",
+    label: "Logo",
+    image: "/Design/Logo-FreshLaundry.jpeg",
+  },
+  {
+    title: "Jokiwithsora Logo",
+    label: "Logo",
+    image: "/Design/Logo-Jokiwithsora.jpeg",
+  },
+  {
+    title: "Kelra Logo",
+    label: "Logo",
+    image: "/Design/Logo-Kelra.jpeg",
+  },
+  {
+    title: "MakPhung Logo",
+    label: "Logo",
+    image: "/Design/Logo-MakPhung.jpeg",
+  },
+  {
+    title: "Studio Logo",
+    label: "Logo",
+    image: "/Design/Logo-Studio.jpeg",
+  },
+  {
+    title: "Teras Graha Logo",
+    label: "Logo",
+    image: "/Design/Logo-TerasGraha.jpeg",
+  },
+];
+
 export default function Home() {
   const { copy, language } = useLanguage();
   const { home, serviceHighlights, faqs } = copy;
+  const workCarouselItems = [...workShowcases, ...workShowcases];
+  const designCarouselItems = [...designShowcases, ...designShowcases];
 
   return (
     <main className="page-transition flex-1 bg-surface text-surface-foreground">
@@ -62,33 +157,40 @@ export default function Home() {
 
       <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-28">
         <PageDecor align="right" tone="process" />
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
             <p className="text-base font-semibold text-accent">
               {home.process.eyebrow}
             </p>
             <h2 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
               {home.process.title}
             </h2>
-          </div>
-          <div>
-            <p className="max-w-2xl text-base leading-8 text-muted">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-muted">
               {home.process.description}
             </p>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {home.process.items.map((item, index) => (
-                <article
-                  className="flex h-full flex-col rounded-lg border border-border bg-card p-6"
-                  key={item.title}
-                >
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-muted">
-                    {item.text}
-                  </p>
-                </article>
+          </div>
+
+          <div className="work-carousel relative mt-12 space-y-5 overflow-hidden py-2">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-linear-to-r from-surface via-surface/80 to-transparent backdrop-blur-[2px] sm:w-32" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-linear-to-l from-surface via-surface/80 to-transparent backdrop-blur-[2px] sm:w-32" />
+            <div className="work-carousel-track work-carousel-track-top flex w-max gap-5">
+              {workCarouselItems.map((item, index) => (
+                <WorkImageCard
+                  item={item}
+                  key={`${item.title}-${index}`}
+                  variant="wide"
+                />
+              ))}
+            </div>
+            <div
+              className="work-carousel-track work-carousel-track-bottom flex w-max gap-5"
+            >
+              {designCarouselItems.map((item, index) => (
+                <WorkImageCard
+                  item={item}
+                  key={`${item.title}-design-${index}`}
+                  variant="design"
+                />
               ))}
             </div>
           </div>
@@ -160,7 +262,7 @@ export default function Home() {
           <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
             {home.testimonials.items.map((testimonial, index) => (
               <figure
-                className="testimonial-card flex h-full flex-col rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground shadow-[0_18px_50px_rgba(36,31,81,0.08)]"
+                className="testimonial-card flex h-full flex-col rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground shadow-card"
                 key={testimonial.name}
                 style={{ animationDelay: `${index * 90}ms` }}
               >
@@ -212,5 +314,66 @@ export default function Home() {
         />
       </section>
     </main>
+  );
+}
+
+function WorkImageCard({
+  item,
+  variant,
+}: {
+  item: {
+    title: string;
+    label: string;
+    image: string;
+  };
+  variant: "wide" | "design";
+}) {
+  const isGas = item.image.startsWith("/GAS/");
+  const isDesign = variant === "design";
+
+  return (
+    <article
+      className={`group shrink-0 overflow-hidden rounded-lg border border-border bg-card shadow-card ${
+        isDesign ? "w-45 sm:w-55" : "w-70 sm:w-105"
+      }`}
+    >
+      <ProductImageModal
+        alt={`${item.title} ${item.label}`}
+        className="block w-full cursor-zoom-in border-0 bg-transparent p-0 text-left"
+        src={item.image}
+      >
+        <div
+          className={`relative overflow-hidden ${
+            isDesign ? "aspect-4/5" : "aspect-16/10"
+          } ${isGas ? "bg-slate-50" : "bg-surface"}`}
+        >
+          <div
+            className={
+              isGas
+                ? "absolute -inset-x-8 -top-14 -bottom-4 sm:-inset-x-12 sm:-top-16 sm:-bottom-6"
+                : "absolute inset-0"
+            }
+          >
+            <Image
+              alt={`${item.title} ${item.label}`}
+              className={`transition duration-500 group-hover:scale-[1.025] ${
+                isGas
+                  ? "object-contain object-top"
+                  : isDesign
+                    ? "object-cover object-center"
+                    : "object-cover object-top"
+              }`}
+              fill
+              sizes={
+                isDesign
+                  ? "(min-width: 1024px) 220px, 180px"
+                  : "(min-width: 1024px) 420px, 280px"
+              }
+              src={item.image}
+            />
+          </div>
+        </div>
+      </ProductImageModal>
+    </article>
   );
 }
