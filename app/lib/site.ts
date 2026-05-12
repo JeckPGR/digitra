@@ -31,8 +31,8 @@ export const siteCopy = {
     },
     theme: {
       switchLabel: "Ganti mode warna",
-      dark: "Gelap",
-      light: "Terang",
+      dark: "Malam",
+      light: "Pagi",
     },
     navLinks: [
       { href: "/", label: "Beranda" },

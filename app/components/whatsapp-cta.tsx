@@ -2,7 +2,7 @@ import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 type WhatsAppCtaProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
-  tone?: "solid" | "outline" | "text";
+  tone?: "solid" | "outline" | "text" | "blue";
 };
 
 export function WhatsAppCta({
@@ -15,8 +15,9 @@ export function WhatsAppCta({
     solid:
       "bg-whatsapp !text-white hover:bg-whatsapp-strong hover:!text-white shadow-whatsapp [&_*]:!text-white",
     outline:
-      "border border-whatsapp text-whatsapp hover:bg-whatsapp hover:!text-white",
-    text: "text-whatsapp hover:text-whatsapp-strong",
+      "border border-whatsapp !text-whatsapp hover:bg-whatsapp hover:!text-white",
+    text: "!text-whatsapp hover:!text-whatsapp-strong",
+    blue: "border border-accent !text-accent hover:bg-accent hover:!text-white",
   }[tone];
 
   const shapeClass =
@@ -26,7 +27,7 @@ export function WhatsAppCta({
 
   return (
     <a
-      className={`${shapeClass} ${toneClass} ${className} !text-whatsapp`}
+      className={`${shapeClass} ${toneClass} ${className}`}
       rel="noreferrer"
       target="_blank"
       {...props}

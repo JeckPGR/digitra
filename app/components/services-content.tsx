@@ -6,7 +6,6 @@ import { CtaPanel } from "./cta-panel";
 import { useLanguage } from "./language-provider";
 import { PackageTabs } from "./package-tabs";
 import { PageDecor } from "./page-decor";
-import { SmoothFaq } from "./smooth-faq";
 import { WhatsAppCta } from "./whatsapp-cta";
 
 export function ServicesContent() {
@@ -14,7 +13,6 @@ export function ServicesContent() {
   const {
     companyProfilePackages,
     designPackages,
-    faqs,
     gasExamples,
     landingPackages,
     servicesPage,
@@ -84,7 +82,7 @@ export function ServicesContent() {
                   <WhatsAppCta
                     className="mt-6 h-11 px-4"
                     href={whatsappLink(`custom ${item.title}`, language)}
-                    tone="outline"
+                    tone="blue"
                   >
                     {item.button}
                   </WhatsAppCta>
@@ -185,7 +183,7 @@ export function ServicesContent() {
                 <WhatsAppCta
                   className="mt-8 h-11 px-4"
                   href={whatsappLink(group.title, language)}
-                  tone="outline"
+                  tone="blue"
                 >
                   {whatsapp.askPackage}
                 </WhatsAppCta>
@@ -232,19 +230,6 @@ export function ServicesContent() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-24">
-        <PageDecor align="right" tone="faq" />
-        <div className="relative mx-auto max-w-4xl text-center">
-          <p className="text-base font-semibold text-accent">
-            {servicesPage.faq.eyebrow}
-          </p>
-          <h2 className="mt-3 text-4xl font-semibold">
-            {servicesPage.faq.title}
-          </h2>
-          <SmoothFaq items={faqs} />
         </div>
       </section>
 
