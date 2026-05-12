@@ -135,7 +135,7 @@ export function DesignServiceContent() {
                   <div className="mt-8 flex flex-wrap gap-3">
                     {isSocmed ? (
                       <Link
-                        className="inline-flex h-11 items-center justify-center rounded-full bg-accent px-4 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+                        className="inline-flex h-11 items-center justify-center rounded-full bg-accent px-4 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white"
                         href="/services/socmed"
                       >
                         {labels.learnMore}

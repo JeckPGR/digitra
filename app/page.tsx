@@ -126,7 +126,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex gap-3 ">
               <Link
-                className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-7 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-7 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white"
                 href="/contact"
               >
                 {home.hero.primaryCta}

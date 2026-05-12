@@ -102,7 +102,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
                   {navLinks.map((link) => (
                     <Link
-                      className="transition hover:text-accent"
+                      className="text-white! transition hover:text-accent"
                       href={link.href}
                       key={link.href}
                     >

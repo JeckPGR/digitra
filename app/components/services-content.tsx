@@ -121,7 +121,7 @@ export function ServicesContent() {
                 {servicesPage.website.description}
               </p>
               <Link
-                className="mt-5 hidden h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:inline-flex"
+                className="mt-5 hidden h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white lg:inline-flex"
                 href="/services/company-profile-landing-page"
               >
                 {servicesPage.website.learnMore}
@@ -134,7 +134,7 @@ export function ServicesContent() {
             landingPackages={landingPackages}
           />
           <Link
-            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:hidden"
+            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white lg:hidden"
             href="/services/company-profile-landing-page"
           >
             {servicesPage.website.learnMore}
@@ -161,7 +161,7 @@ export function ServicesContent() {
               </p>
             </div>
             <Link
-              className="hidden h-11 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:inline-flex"
+              className="hidden h-11 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white lg:inline-flex"
               href="/services/socmed"
             >
               {learnMoreLabel}
@@ -193,7 +193,7 @@ export function ServicesContent() {
             ))}
           </div>
           <Link
-            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong lg:hidden"
+            className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white lg:hidden"
             href="/services/socmed"
           >
             {learnMoreLabel}
@@ -253,7 +253,7 @@ export function ServicesContent() {
         <CtaPanel
           action={
             <Link
-              className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white"
               href="/contact"
             >
               {servicesPage.recommendation.cta}

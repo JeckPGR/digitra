@@ -72,10 +72,10 @@ export function ContactContent() {
               {contactPage.topics.title}
             </h2>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-3 text-white">
             {serviceHighlights.map((service) => (
               <a
-                className="flex h-full flex-col rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground shadow-card transition hover:-translate-y-1 hover:border-whatsapp"
+                className="flex h-full flex-col rounded-lg border border-border-dark bg-paper p-6 text-paper-foreground shadow-card transition hover:-translate-y-1 hover:border-accent"
                 href={whatsappLink(service.title, language)}
                 key={service.title}
                 rel="noreferrer"
@@ -84,14 +84,14 @@ export function ContactContent() {
                 <p className="text-sm font-semibold text-accent-strong">
                   {service.eyebrow}
                 </p>
-                <h3 className="mt-4 text-2xl font-semibold leading-tight">
+                <h3 className="mt-4 text-white text-2xl font-semibold leading-tight">
                   {service.title}
                 </h3>
-                <p className="mt-4 flex-1 text-sm leading-7 text-paper-muted">
+                <p className="mt-4 text-white flex-1 text-sm leading-7 text-paper-muted">
                   {service.summary}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-whatsapp">
-                  <WhatsAppIcon />
+                  <WhatsAppIcon className="text-whatsapp size-5"/>
                   {whatsapp.consultViaWhatsApp}
                 </span>
               </a>
