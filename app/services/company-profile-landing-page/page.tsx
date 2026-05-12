@@ -4,6 +4,9 @@ export const metadata = {
   title: "Company Profile & Landing Page - Digitra",
   description:
     "Detail layanan website Company Profile dan Landing Page Digitra untuk menjelaskan bisnis, membangun trust, dan mengarahkan calon klien.",
+  alternates: {
+    canonical: "/services/company-profile-landing-page",
+  },
 };
 
 export default function WebsiteServicePage() {
