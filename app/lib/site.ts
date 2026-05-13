@@ -377,6 +377,48 @@ export const siteCopy = {
         button: "Tanya Detail ",
       },
     ],
+    gasBenefits: [
+      {
+        title: "Tanpa Server Tambahan",
+        subtitle:
+          "Mulai bangun aplikasi bisnis tanpa perlu menyewa atau mengelola server sendiri.",
+      },
+      {
+        title: "Lebih Hemat Biaya",
+        subtitle:
+          "Solusi custom yang lebih terjangkau karena dibangun langsung di atas ekosistem Google Workspace.",
+      },
+      {
+        title: "Data Tetap di Tangan Anda",
+        subtitle:
+          "Database menggunakan Google Sheets, sehingga data tetap transparan, mudah dicek, dan bisa dikelola sendiri.",
+      },
+      {
+        title: "Familiar untuk Tim",
+        subtitle:
+          "Tim lebih cepat beradaptasi karena sistem menggunakan spreadsheet yang sudah umum dipakai dalam operasional bisnis.",
+      },
+      {
+        title: "Terhubung ke Google Workspace",
+        subtitle:
+          "Integrasikan workflow dengan Sheets, Gmail, Drive, Forms, Docs, dan Calendar dalam satu sistem yang rapi.",
+      },
+      {
+        title: "Workflow Lebih Otomatis",
+        subtitle:
+          "Kurangi pekerjaan manual seperti rekap data, approval, laporan, reminder, dan notifikasi berulang.",
+      },
+      {
+        title: "Dibuat Sesuai Alur Bisnis",
+        subtitle:
+          "Sistem dirancang mengikuti proses kerja bisnis Anda agar lebih relevan, praktis, dan mudah digunakan.",
+      },
+      {
+        title: "Cocok untuk Sistem Internal",
+        subtitle:
+          "Pilihan ideal untuk MVP, dashboard operasional, approval system, POS sederhana, inventory, dan tools internal bisnis.",
+      },
+    ],
     gasShowcases: [
       {
         title: "Fashion Retail POS",
@@ -416,26 +458,126 @@ export const siteCopy = {
       {
         title: "Logo Design",
         packages: [
-          "Starter - Rp 200.000, cocok untuk logo usaha baru, 3 pilihan konsep, semua format file, dan 3x revisi",
-          "Top - Rp 400.000, pilihan terbaik untuk brand yang ingin tampil lebih matang, 4 konsep desain, semua format file, 4x revisi, dan 3D mockup",
-          "Premium - Rp 750.000, jasa desain logo profesional dengan 5 konsep, VIP support, semua format file, revisi fleksibel, dan 3D mockup",
+          "Starter - Rp 200K, cocok untuk logo usaha baru, 3 konsep logo, all file format, dan 3x revisi",
+          "Top - Rp 400K, pilihan seimbang dengan 4 konsep logo, all file format, 4x revisi, dan 3D mockup",
+          "Premium - Rp 750K, untuk brand yang butuh output lebih matang, 5 konsep logo, VIP support, all file format, revisi fleksibel, dan 3D mockup",
         ],
       },
       {
         title: "Brosur / Poster",
         packages: [
-          "Easy - 2 desain brosur atau poster promosi, semua format file, dan 2x revisi",
-          "Medium - 3 desain, semua format file, 2x revisi, dan 3D mockup untuk presentasi yang lebih menarik",
-          "Hard - 3 desain premium, VIP support, semua format file, 3x revisi, dan 3D mockup",
+          "Easy - Rp 25K, 2 desain brosur atau poster promosi, all file format, dan 2x revisi",
+          "Medium - Rp 50K, 3 desain, all file format, 2x revisi, dan 3D mockup untuk presentasi yang lebih menarik",
+          "Hard - Rp 75K, 3 desain premium, VIP support, all file format, 3x revisi, dan 3D mockup",
         ],
       },
       {
         title: "Social Media Feeds",
         packages: [
-          "Paket jasa desain feeds Instagram profesional tersedia OnChat dan disesuaikan dengan jumlah konten, gaya visual, serta kebutuhan campaign brand Anda",
+          "Paket feeds social media dibuat custom sesuai jumlah konten, gaya visual, target campaign, dan kebutuhan CTA copywriting. Chat terlebih dahulu agar scope dan estimasi lebih pas.",
         ],
       },
     ],
+    designPackageCards: {
+      bestValueLabel: "Pilihan terbaik",
+      tierCtaPrefix: "Chat Paket",
+      sections: [
+        {
+          eyebrow: "Logo",
+          title: "Logo Design",
+          description:
+            "Paket logo untuk bisnis baru maupun brand yang ingin terlihat lebih matang, lengkap dengan file akhir yang siap dipakai.",
+          topic: "paket Logo Design",
+          tiers: [
+            {
+              name: "Starter",
+              price: "Rp 200K",
+              note: "Untuk logo usaha baru",
+              features: ["3 konsep logo", "All file format", "3x revisi"],
+            },
+            {
+              name: "Top",
+              price: "Rp 400K",
+              note: "Paket seimbang untuk brand yang ingin tampil lebih rapi",
+              featured: true,
+              features: [
+                "4 konsep logo",
+                "All file format",
+                "4x revisi",
+                "3D mockup",
+              ],
+            },
+            {
+              name: "Premium",
+              price: "Rp 750K",
+              note: "Untuk brand yang butuh eksplorasi visual lebih matang",
+              features: [
+                "5 konsep logo",
+                "VIP support",
+                "All file format",
+                "Revisi fleksibel",
+                "3D mockup",
+              ],
+            },
+          ],
+        },
+        {
+          eyebrow: "Print & Promo",
+          title: "Brosur / Poster",
+          description:
+            "Paket desain promosi untuk brosur, poster, menu, campaign, dan materi presentasi bisnis yang siap dipakai online maupun cetak.",
+          topic: "paket Brosur atau Poster",
+          tiers: [
+            {
+              name: "Easy",
+              price: "Rp 25K",
+              note: "Untuk kebutuhan desain promosi sederhana",
+              features: ["2 desain", "All file format", "2x revisi"],
+            },
+            {
+              name: "Medium",
+              price: "Rp 50K",
+              note: "Untuk materi promosi dengan kebutuhan visual lebih lengkap",
+              featured: true,
+              features: [
+                "3 desain",
+                "All file format",
+                "2x revisi",
+                "3D mockup",
+              ],
+            },
+            {
+              name: "Hard",
+              price: "Rp 75K",
+              note: "Untuk desain promosi premium dengan support ekstra",
+              features: [
+                "3 desain premium",
+                "VIP support",
+                "All file format",
+                "3x revisi",
+                "3D mockup",
+              ],
+            },
+          ],
+        },
+      ],
+      feeds: {
+        eyebrow: "Social Media Feeds",
+        title: "Paket feed dibuat custom sesuai target konten.",
+        description:
+          "Ceritakan jumlah posting, referensi akun, target campaign, dan kebutuhan caption. Digitra bantu susun arah visual, CTA copywriting, dan scope desain yang paling efisien sebelum produksi dimulai.",
+        topic: "paket feeds social media custom dengan CTA copywriting",
+        cta: "Chat Paket Feeds Custom",
+        detailHref: "/services/socmed",
+        detailLabel: "Lihat Detail Feeds",
+        highlights: [
+          "Jumlah konten fleksibel",
+          "Arah visual brand",
+          "CTA copywriting",
+          "File siap upload",
+        ],
+      },
+    },
     designFaqs: [
       {
         question: "Berapa harga jasa desain logo di Digitra?",
@@ -917,6 +1059,48 @@ export const siteCopy = {
         button: "Consult Now",
       },
     ],
+    gasBenefits: [
+      {
+        title: "No Extra Server",
+        subtitle:
+          "Start building a business app without renting or managing your own server.",
+      },
+      {
+        title: "More Cost Efficient",
+        subtitle:
+          "A more affordable custom solution because it is built directly on top of the Google Workspace ecosystem.",
+      },
+      {
+        title: "Your Data Stays With You",
+        subtitle:
+          "The database uses Google Sheets, so your data stays transparent, easy to check, and manageable by your own team.",
+      },
+      {
+        title: "Familiar for the Team",
+        subtitle:
+          "Teams adapt faster because the system uses spreadsheets that are already common in business operations.",
+      },
+      {
+        title: "Connected to Google Workspace",
+        subtitle:
+          "Integrate workflows with Sheets, Gmail, Drive, Forms, Docs, and Calendar in one organized system.",
+      },
+      {
+        title: "More Automated Workflow",
+        subtitle:
+          "Reduce manual work such as data recap, approvals, reports, reminders, and recurring notifications.",
+      },
+      {
+        title: "Built Around Your Business Flow",
+        subtitle:
+          "The system is designed around your workflow so it stays relevant, practical, and easy to use.",
+      },
+      {
+        title: "Great for Internal Systems",
+        subtitle:
+          "Ideal for MVPs, operational dashboards, approval systems, simple POS, inventory, and internal business tools.",
+      },
+    ],
     gasShowcases: [
       {
         title: "Fashion Retail POS",
@@ -956,26 +1140,121 @@ export const siteCopy = {
       {
         title: "Logo Design",
         packages: [
-          "Starter - Rp 200.000, ideal for new business logos, 3 concept options, all file formats, and 3 revisions",
-          "Top - Rp 400.000, best for brands that want a more polished look, 4 design concepts, all file formats, 4 revisions, and 3D mockup",
-          "Premium - Rp 750.000, professional logo design with 5 concepts, VIP support, all file formats, flexible revisions, and 3D mockup",
+          "Starter - Rp 200K, ideal for new business logos, 3 logo concepts, all file formats, and 3 revisions",
+          "Top - Rp 400K, balanced package with 4 logo concepts, all file formats, 4 revisions, and 3D mockup",
+          "Premium - Rp 750K, for brands that need a more mature output, 5 logo concepts, VIP support, all file formats, flexible revisions, and 3D mockup",
         ],
       },
       {
         title: "Brochure / Poster",
         packages: [
-          "Easy - 2 brochure or promotional poster designs, all file formats, and 2 revisions",
-          "Medium - 3 designs, all file formats, 2 revisions, and 3D mockup for stronger presentation",
-          "Hard - 3 premium designs, VIP support, all file formats, 3 revisions, and 3D mockup",
+          "Easy - Rp 25K, 2 brochure or promotional poster designs, all file formats, and 2 revisions",
+          "Medium - Rp 50K, 3 designs, all file formats, 2 revisions, and 3D mockup for stronger presentation",
+          "Hard - Rp 75K, 3 premium designs, VIP support, all file formats, 3 revisions, and 3D mockup",
         ],
       },
       {
         title: "Social Media Feeds",
         packages: [
-          "Professional Instagram feed design packages are available OnChat and adjusted to your content volume, visual direction, and campaign needs",
+          "Social media feed packages are custom-built based on content volume, visual direction, campaign target, and CTA copywriting needs. Chat first so the scope and estimate fit better.",
         ],
       },
     ],
+    designPackageCards: {
+      bestValueLabel: "Best value",
+      tierCtaPrefix: "Chat Package",
+      sections: [
+        {
+          eyebrow: "Logo",
+          title: "Logo Design",
+          description:
+            "Logo packages for new businesses or brands that need a more polished identity, complete with final files ready to use.",
+          topic: "Logo Design package",
+          tiers: [
+            {
+              name: "Starter",
+              price: "Rp 200K",
+              note: "For new business logos",
+              features: ["3 logo concepts", "All file formats", "3 revisions"],
+            },
+            {
+              name: "Top",
+              price: "Rp 400K",
+              note: "A balanced package for brands that want a cleaner look",
+              featured: true,
+              features: [
+                "4 logo concepts",
+                "All file formats",
+                "4 revisions",
+                "3D mockup",
+              ],
+            },
+            {
+              name: "Premium",
+              price: "Rp 750K",
+              note: "For brands that need deeper visual exploration",
+              features: [
+                "5 logo concepts",
+                "VIP support",
+                "All file formats",
+                "Flexible revisions",
+                "3D mockup",
+              ],
+            },
+          ],
+        },
+        {
+          eyebrow: "Print & Promo",
+          title: "Brochure / Poster",
+          description:
+            "Promotional design packages for brochures, posters, menus, campaigns, and business presentation assets ready for online or print use.",
+          topic: "Brochure or Poster package",
+          tiers: [
+            {
+              name: "Easy",
+              price: "Rp 25K",
+              note: "For simple promotional design needs",
+              features: ["2 designs", "All file formats", "2 revisions"],
+            },
+            {
+              name: "Medium",
+              price: "Rp 50K",
+              note: "For promotional materials with more complete visual needs",
+              featured: true,
+              features: ["3 designs", "All file formats", "2 revisions", "3D mockup"],
+            },
+            {
+              name: "Hard",
+              price: "Rp 75K",
+              note: "For premium promotional design with extra support",
+              features: [
+                "3 premium designs",
+                "VIP support",
+                "All file formats",
+                "3 revisions",
+                "3D mockup",
+              ],
+            },
+          ],
+        },
+      ],
+      feeds: {
+        eyebrow: "Social Media Feeds",
+        title: "Custom feed packages built around your content goals.",
+        description:
+          "Tell us your post volume, account references, campaign target, and caption needs. Digitra will shape the visual direction, CTA copywriting, and the most efficient design scope before production starts.",
+        topic: "custom social media feed package with CTA copywriting",
+        cta: "Chat Custom Feed Package",
+        detailHref: "/services/socmed",
+        detailLabel: "See Feed Details",
+        highlights: [
+          "Flexible content volume",
+          "Brand visual direction",
+          "CTA copywriting",
+          "Ready-to-upload files",
+        ],
+      },
+    },
     designFaqs: [
       {
         question: "How much does logo design cost at Digitra?",
