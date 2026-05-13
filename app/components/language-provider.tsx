@@ -10,12 +10,10 @@ import {
 } from "react";
 import { type Language, siteCopy } from "../lib/site";
 
-type SiteCopy = (typeof siteCopy)["id"];
-
 type LanguageContextValue = {
   language: Language;
   setLanguage: (language: Language) => void;
-  copy: SiteCopy;
+  copy: (typeof siteCopy)[Language];
 };
 
 const STORAGE_KEY = "digitra-language";
@@ -45,9 +43,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguageState(nextLanguage);
   };
 
-  const copy = useMemo<SiteCopy>(() => {
-    return siteCopy[language as keyof typeof siteCopy] ?? siteCopy.id;
-  }, [language]);
+  const copy = useMemo(() => siteCopy[language], [language]);
 
   const value = useMemo(
     () => ({

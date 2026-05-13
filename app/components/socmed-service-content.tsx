@@ -1,55 +1,43 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { whatsappLink } from "../lib/site";
 import { useLanguage } from "./language-provider";
 import { PageDecor } from "./page-decor";
-import { ProductImageModal } from "./product-image-modal";
 import { WhatsAppCta } from "./whatsapp-cta";
 
-const designShowcases = [
+const showcaseCards = [
   {
-    title: "Brosur",
-    image: "/Design/Brosur.jpeg",
+    title: "Launch Grid",
+    category: "Campaign",
+    accent: "from-[#ff8c61] to-[#ffd166]",
+    blocks: ["Product story", "Offer hook", "CTA frame"],
   },
   {
-    title: "JWS Graphic",
-    image: "/Design/DesignGrafis-JWS.jpeg",
+    title: "Brand Feed",
+    category: "Identity",
+    accent: "from-[#8be9fd] to-[#25d366]",
+    blocks: ["Tone visual", "Color rhythm", "Content pillars"],
   },
   {
-    title: "StudioIn Graphic",
-    image: "/Design/DesignGrafis-StudioIn.jpeg",
+    title: "Promo Set",
+    category: "Sales",
+    accent: "from-[#c084fc] to-[#ff8c61]",
+    blocks: ["Carousel intro", "Value stack", "Closing CTA"],
   },
   {
-    title: "Bakery Logo",
-    image: "/Design/Logo-Bakery.jpeg",
+    title: "Story Pack",
+    category: "Engagement",
+    accent: "from-[#25d366] to-[#f9f9f9]",
+    blocks: ["Quick poll", "Soft sell", "DM trigger"],
   },
   {
-    title: "Fresh Laundry Logo",
-    image: "/Design/Logo-FreshLaundry.jpeg",
+    title: "Reels Cover",
+    category: "Motion",
+    accent: "from-[#ffd166] to-[#8be9fd]",
+    blocks: ["Cover title", "Hook line", "Series badge"],
   },
-  {
-    title: "Jokiwithsora Logo",
-    image: "/Design/Logo-Jokiwithsora.jpeg",
-  },
-  {
-    title: "Kelra Logo",
-    image: "/Design/Logo-Kelra.jpeg",
-  },
-  {
-    title: "MakPhung Logo",
-    image: "/Design/Logo-MakPhung.jpeg",
-  },
-  {
-    title: "Studio Logo",
-    image: "/Design/Logo-Studio.jpeg",
-  },
-  {
-    title: "Teras Graha Logo",
-    image: "/Design/Logo-TerasGraha.jpeg",
-  },
-] as const;
+];
 
 export function SocmedServiceContent() {
   const { language } = useLanguage();
@@ -62,16 +50,12 @@ export function SocmedServiceContent() {
           title:
             "Feed, story, dan campaign visual yang terasa rapi sejak swipe pertama.",
           description:
-            "Digitra membantu brand menyusun konten Instagram yang konsisten, mudah dibaca, dan siap dipakai untuk campaign harian maupun peluncuran produk.",
+            "Kolaborasi Digitra x Sorative membantu brand menyusun konten Instagram yang konsisten, mudah dibaca, dan siap dipakai untuk campaign harian maupun peluncuran produk.",
           primaryCta: "Diskusi Paket Socmed",
           secondaryCta: "Lihat Alur",
-          overviewLabel: "Detail layanan",
-          detailTitle:
-            "Paket visual brand untuk feed, logo, dan brosur yang siap dipakai.",
-          detailDescription:
-            "Layanan ini mencakup desain feed media sosial, logo usaha, dan brosur promosi yang disesuaikan dengan karakter brand, target audiens, serta kebutuhan campaign.",
-          showcaseEyebrow: "Design Showcase",
-          showcaseTitle: "Contoh visual dari portfolio design Digitra.",
+          lockupLabel: "Creative collaboration",
+          showcaseEyebrow: "Showcase Direction",
+          showcaseTitle: "Ritme visual untuk konten yang terus bergerak.",
           processEyebrow: "Workflow Khusus",
           processTitle:
             "Dari brief bisnis ke sistem konten yang siap jalan.",
@@ -86,8 +70,9 @@ export function SocmedServiceContent() {
           ],
           deliverables: [
             "Feed design",
-            "Logo",
-            "Brosur",
+            "Story pack",
+            "Cover reels",
+            "Caption direction",
           ],
         }
       : {
@@ -96,16 +81,12 @@ export function SocmedServiceContent() {
           title:
             "Feeds, stories, and campaign visuals that feel polished from the first swipe.",
           description:
-            "Digitra helps brands shape Instagram content that is consistent, easy to scan, and ready for daily campaigns or product launches.",
+            "The Digitra x Sorative collaboration helps brands shape Instagram content that is consistent, easy to scan, and ready for daily campaigns or product launches.",
           primaryCta: "Discuss Socmed Package",
           secondaryCta: "See Workflow",
-          overviewLabel: "Service detail",
-          detailTitle:
-            "Brand visuals for feeds, logos, and brochures that are ready to use.",
-          detailDescription:
-            "This service covers social media feed design, business logos, and promotional brochures shaped around the brand character, audience, and campaign needs.",
-          showcaseEyebrow: "Design Showcase",
-          showcaseTitle: "Visual examples from Digitra's design portfolio.",
+          lockupLabel: "Creative collaboration",
+          showcaseEyebrow: "Showcase Direction",
+          showcaseTitle: "A visual rhythm for content that keeps moving.",
           processEyebrow: "Special Workflow",
           processTitle: "From business brief to a content system ready to run.",
           closingTitle: "Ready to make your brand feed sharper?",
@@ -119,12 +100,13 @@ export function SocmedServiceContent() {
           ],
           deliverables: [
             "Feed design",
-            "Logo",
-            "Brochure",
+            "Story pack",
+            "Reels covers",
+            "Caption direction",
           ],
         };
 
-  const carouselItems = [...designShowcases, ...designShowcases];
+  const carouselItems = [...showcaseCards, ...showcaseCards];
 
   return (
     <main className="page-transition flex-1 overflow-hidden bg-surface text-surface-foreground">
@@ -161,16 +143,14 @@ export function SocmedServiceContent() {
           </div>
 
           <div className="socmed-glow relative rounded-lg border border-border bg-card p-5 sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-              {labels.overviewLabel}
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-              {labels.detailTitle}
-            </h2>
-            <p className="mt-5 text-sm leading-7 text-muted">
-              {labels.detailDescription}
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="flex items-center justify-between gap-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                {labels.lockupLabel}
+              </p>
+              <span className="h-2 w-2 rounded-full bg-whatsapp shadow-glow" />
+            </div>
+            <CollabLogo />
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {labels.deliverables.map((item) => (
                 <div
                   className="rounded-md border border-border bg-surface/50 px-3 py-4"
@@ -200,7 +180,7 @@ export function SocmedServiceContent() {
           <div className="socmed-carousel overflow-hidden">
             <div className="socmed-carousel-track flex w-max gap-5 px-5 sm:px-8 lg:px-10">
               {carouselItems.map((item, index) => (
-                <ShowcaseImage item={item} key={`${item.image}-${index}`} />
+                <ShowcaseCard item={item} key={`${item.title}-${index}`} />
               ))}
             </div>
           </div>
@@ -210,9 +190,9 @@ export function SocmedServiceContent() {
               data-direction="reverse"
             >
               {carouselItems.map((item, index) => (
-                <ShowcaseImage
+                <ShowcaseCard
                   item={item}
-                  key={`${item.image}-reverse-${index}`}
+                  key={`${item.title}-reverse-${index}`}
                 />
               ))}
             </div>
@@ -271,28 +251,47 @@ export function SocmedServiceContent() {
   );
 }
 
-function ShowcaseImage({
+function CollabLogo() {
+  return (
+    <div className="mt-6 flex flex-wrap items-center gap-3">
+      <span className="rounded-md bg-surface px-4 py-3 text-2xl font-black uppercase tracking-normal text-surface-foreground sm:text-4xl">
+        Digitra
+      </span>
+      <span className="grid h-10 w-10 place-items-center rounded-full border border-accent/50 text-lg font-semibold text-accent">
+        x
+      </span>
+      <span className="rounded-md border border-border bg-surface/40 px-4 py-3 text-2xl font-black uppercase tracking-normal text-surface-foreground sm:text-4xl">
+        Sorative
+      </span>
+    </div>
+  );
+}
+
+function ShowcaseCard({
   item,
 }: {
-  item: (typeof designShowcases)[number];
+  item: (typeof showcaseCards)[number];
 }) {
   return (
-    <article className="group w-45 shrink-0 overflow-hidden rounded-lg border border-border bg-card shadow-card sm:w-55">
-      <ProductImageModal
-        alt={`${item.title} showcase`}
-        className="relative block w-full cursor-zoom-in overflow-hidden border-0 bg-transparent p-0 text-left"
-        src={item.image}
-      >
-        <div className="relative aspect-4/5 overflow-hidden bg-surface">
-          <Image
-            alt={`${item.title} showcase`}
-            className="object-cover object-center transition duration-500 group-hover:scale-[1.025]"
-            fill
-            sizes="(min-width: 1024px) 220px, 180px"
-            src={item.image}
-          />
+    <article className="w-[250px] shrink-0 overflow-hidden rounded-lg border border-border bg-card shadow-card sm:w-[300px]">
+      <div className={`h-36 bg-gradient-to-br ${item.accent} p-4`}>
+        <div className="flex h-full flex-col justify-between rounded-md bg-surface/25 p-4 backdrop-blur-sm">
+          <span className="w-fit rounded-full bg-surface/70 px-3 py-1 text-xs font-semibold text-surface-foreground">
+            {item.category}
+          </span>
+          <p className="max-w-[11rem] text-2xl font-semibold leading-tight text-white">
+            {item.title}
+          </p>
         </div>
-      </ProductImageModal>
+      </div>
+      <div className="space-y-3 p-5">
+        {item.blocks.map((block) => (
+          <div className="flex items-center gap-3" key={block}>
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            <span className="text-sm font-semibold text-muted">{block}</span>
+          </div>
+        ))}
+      </div>
     </article>
   );
 }
