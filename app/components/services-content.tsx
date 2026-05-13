@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { whatsappLink } from "../lib/site";
 import { CtaPanel } from "./cta-panel";
+import { DesignPackageCards } from "./design-package-cards";
 import { useLanguage } from "./language-provider";
 import { PackageTabs } from "./package-tabs";
 import { PageDecor } from "./page-decor";
@@ -12,11 +13,9 @@ export function ServicesContent() {
   const { copy, language } = useLanguage();
   const {
     companyProfilePackages,
-    designPackages,
     gasExamples,
     landingPackages,
     servicesPage,
-    whatsapp,
     workflowSteps,
   } = copy;
   const learnMoreLabel =
@@ -160,39 +159,18 @@ export function ServicesContent() {
             </div>
             <Link
               className="hidden h-11 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white lg:inline-flex"
-              href="/services/socmed"
+              href="/services/designs"
             >
               {learnMoreLabel}
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-4 lg:grid-cols-3">
-            {designPackages.map((group) => (
-              <article
-                className="flex h-full flex-col rounded-lg border border-border bg-card p-6"
-                key={group.title}
-              >
-                <p className="text-2xl font-semibold">{group.title}</p>
-                <ul className="mt-5 flex-1 space-y-3 text-sm leading-7 text-muted">
-                  {group.packages.map((item) => (
-                    <li className="border-t border-border pt-3" key={item}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <WhatsAppCta
-                  className="mt-8 h-11 px-4"
-                  href={whatsappLink(group.title, language)}
-                  tone="blue"
-                >
-                  {whatsapp.askPackage}
-                </WhatsAppCta>
-              </article>
-            ))}
+          <div className="mt-10">
+            <DesignPackageCards language={language} />
           </div>
           <Link
             className="w-full mt-6 inline-flex h-12 items-center justify-center rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground transition hover:bg-accent-strong hover:text-white lg:hidden"
-            href="/services/socmed"
+            href="/services/designs"
           >
             {learnMoreLabel}
           </Link>
