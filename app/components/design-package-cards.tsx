@@ -112,12 +112,6 @@ export function DesignPackageCards() {
             >
               {feeds.cta}
             </WhatsAppCta>
-            <Link
-              className="inline-flex h-11 items-center justify-center rounded-full border border-accent bg-card px-5 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white"
-              href={feeds.detailHref}
-            >
-              {feeds.detailLabel}
-            </Link>
           </div>
         </div>
       </article>

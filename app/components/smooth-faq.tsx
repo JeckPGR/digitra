@@ -35,7 +35,7 @@ export function SmoothFaq({ items }: SmoothFaqProps) {
             >
               <span>{faq.question}</span>
               <span
-                className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-border text-accent transition ${
+                className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-border text-accent! transition ${
                   isOpen ? "rotate-45 bg-surface" : "bg-card"
                 }`}
               >

@@ -117,7 +117,7 @@ export function ServiceDetailContent({ kind }: ServiceDetailContentProps) {
     <main className="page-transition flex-1 bg-surface text-surface-foreground">
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-10 lg:px-10 lg:py-24">
+      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
         <PageDecor tone={isGas ? "process" : "services"} />
         <div className="relative mx-auto max-w-7xl">
           <Link

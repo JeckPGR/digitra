@@ -169,21 +169,21 @@ export const siteCopy = {
       landing: {
         label: "Landing Page",
         description:
-          "Cocok untuk promosi satu produk, campaign, validasi market, atau halaman penjualan yang fokus pada satu tujuan.",
+          "Sangat cocok untuk mempromosikan satu produk, menayangkan iklan, menguji ide bisnis, atau membuat halaman penjualan yang terfokus dengan potensi konversi yang tinggi.",
       },
       company: {
         label: "Company Profile",
         description:
-          "Cocok untuk bisnis yang perlu profil lebih lengkap dengan struktur halaman profesional.",
+          "Website bisnis profesional yang dirancang untuk memperkuat identitas merek, menampilkan layanan dan portofolio, serta membantu calon pelanggan lebih cepat mempercayai bisnis Anda.",
       },
     },
     landingPackages: [
       {
         name: "Starter",
-        price: "Rp 500.000",
+        price: "Rp 450.000",
         label: "Landing Page",
         features: [
-          "Durasi Pengerjaan 4-6 hari",
+          "Durasi Pengerjaan 3-5 hari",
           "4x revisi minor",
           "2x revisi mayor",
           "Maksimal 4 section",
@@ -191,25 +191,27 @@ export const siteCopy = {
           "Responsive design",
           "Copywriting tidak termasuk",
           "Domain dan hosting tidak termasuk",
-          "Source code opsional via Github",
+          "Pengiriman kode sumber melalui GitHub / ZIP",
           "Maintance 1 Bulan"
         ],
       },
       {
         name: "Intermediate",
-        price: "Rp 1.100.000",
+        price: "Rp 950.000",
         label: "Best Value",
         featured: true,
         features: [
-          "Durasi Pengerjaan 2-4 hari",
+          "Durasi Pengerjaan 3-4 hari",
+          "layanan VIP",
           "6x revisi minor",
-          "3x revisi mayor untuk layout",
+          "2 revisi mayor untuk layout",
           "Maksimal 7 section",
-          "SEO Premium",
-          "Copywriting termasuk",
+          "SEO Menengah",
+          "Responsive design",
           "Animasi",
+          "Copywriting termasuk",
           "Domain dan hosting termasuk (.com, .net, .online)",
-          "Source code opsional via Github",
+          "Pengiriman kode sumber melalui GitHub / ZIP",
           "Maintance 3 Bulan"
         ],
       },
@@ -217,23 +219,24 @@ export const siteCopy = {
     companyProfilePackages: [
       {
         name: "Starter",
-        price: "Rp 800.000",
+        price: "Rp 900.000",
         label: "Company Profile",
         features: [
           "Untuk UMKM dan bisnis baru",
-          "Durasi 7 hari",
+          "Durasi 6 hari",
           "2x revisi minor",
           "2x revisi mayor untuk layout",
           "Maksimal 3 halaman",
           "Konten teks dari klien",
+          "SEO Basic",
           "Responsive mobile dan desktop",
-          "Source code via Github atau ZIP",
+          "Pengiriman kode sumber melalui GitHub / ZIP",
           "Domain dan hosting tidak termasuk",
         ],
       },
       {
         name: "Intermediate",
-        price: "Rp 1.350.000",
+        price: "Rp 1.700.000",
         label: "Best Value",
         featured: true,
         features: [
@@ -244,8 +247,8 @@ export const siteCopy = {
           "Maksimal 5 halaman",
           "Copywriting profesional dari bullet points",
           "Animasi ringan dan UI modern",
-          "SEO dasar untuk meta title dan description",
-          "Source code via Github atau ZIP",
+          "SEO Profesional (Metadata & Teknis)",
+          "Pengiriman kode sumber melalui GitHub / ZIP",
           "Domain dan hosting tidak termasuk",
         ],
       },
@@ -262,7 +265,7 @@ export const siteCopy = {
         eyebrow: "01 / GAS",
         title: "GAS Web Business Application",
         description:
-          "Sistem berbasis Google Apps Script untuk workflow, laporan, dashboard, approval, dan proses operasional yang sering berulang.",
+          "Digitra mengembangkan sistem bisnis Google Apps Script (GAS) yang disesuaikan untuk menyederhanakan operasional sehari-hari, mengotomatiskan alur kerja yang berulang, dan mengintegrasikan data bisnis Anda ke dalam satu dasbor yang efisien, semuanya dirancang untuk menghemat waktu dan mengurangi pekerjaan manual.",
         learnMore: "Pelajari lebih Lanjut",
         detail: {
           eyebrow: "Detail GAS Automation",
@@ -302,7 +305,7 @@ export const siteCopy = {
         eyebrow: "02 / Website",
         title: "Company Profile & Landing Page",
         description:
-          "Website profesional untuk memperkenalkan bisnis, menjelaskan penawaran, dan mengarahkan klien pembelian.",
+          "Website profesional yang dirancang untuk membantu bisnis membangun kredibilitas, menjelaskan layanan mereka dengan jelas, dan mengubah pengunjung menjadi pelanggan. Baik Anda membutuhkan halaman arahan yang terfokus untuk kampanye atau situs web profil perusahaan yang lengkap, Digitra menghadirkan pengalaman web yang responsif dan berorientasi pada konversi, yang disesuaikan dengan tujuan bisnis Anda.",
         learnMore: "Pelajari Lebih Lanjut",
         topic: "paket Company Profile dan Landing Page",
         detail: {
@@ -335,7 +338,7 @@ export const siteCopy = {
         eyebrow: "03 / Design",
         title: "Jasa desain logo, brosur, dan feeds Instagram profesional.",
         description:
-          "Digitra membantu bisnis membuat desain logo, brosur, poster, dan konten feeds media sosial yang rapi, konsisten, dan siap dipakai untuk promosi online maupun offline.",
+          "Digitra menyediakan layanan desain visual untuk membantu bisnis tampil lebih profesional, konsisten, dan siap untuk promosi baik secara daring maupun luring. Mulai dari logo dan materi promosi hingga konten media sosial — setiap desain dibuat untuk memperkuat identitas merek Anda dan menarik pelanggan secara visual.",
         detail: {
           title: "Desain visual yang dibuat sesuai kebutuhan brand dan budget.",
           description:
@@ -359,22 +362,22 @@ export const siteCopy = {
     },
     gasExamples: [
        {
-        title: "F&B Business Management",
+        title: "Aplikasi Manajemen Usaha Kuliner",
         description:
-          "Sistem POS F&B cerdas dengan sinkronisasi data real-time. Nikmati kemudahan kalkulasi HPP otomatis dan pelacakan bahan baku akurat untuk amankan profitabilitas bisnis Anda",
+          "Sistem manajemen bisnis F&B cerdas dengan sinkronisasi data real-time, perhitungan HPP produk otomatis, pengendalian persediaan, pelacakan pengeluaran, dan fitur POS terintegrasi — dirancang untuk membantu bisnis kuliner beroperasi lebih efisien sambil mempertahankan profitabilitas dan akurasi operasional.",
         button: "Tanya Detail ",
       },
       {
-        title: "Fashion Retail POS",
+        title: "Aplikasi Reseller Akun Premium",
         description:
-          "Kelola transaksi retail & grosir, dan lacak seluruh siklus pesanan secara end-to-end, mulai dari proses tunggu hingga diterima pelanggan, dalam satu dashboard cerdas.",
+          "Sistem manajemen untuk bisnis penyewaan akun premium dan reseller, dilengkapi dengan pelacakan pelanggan, pengingat tanggal jatuh tempo sewa otomatis, manajemen transaksi, dan fitur loyalitas dinamis untuk meningkatkan pesanan berulang dan retensi pelanggan.",
+        button: "Tanya Detail ",
+      },
+      {
+        title: "Aplikasi Kasir Fashion & Grosir",
+        description:
+          "Sistem POS dan manajemen pesanan terintegrasi untuk bisnis ritel dan grosir fashion, dilengkapi dengan manajemen persediaan, pelacakan transaksi, serta pemantauan perkembangan pesanan internal bagi admin dan pelanggan. Sistem ini membantu bisnis menghadirkan pengalaman pemesanan yang lebih terorganisir dan profesional.",
         button: "Tanya Detail",
-      },
-      {
-        title: "Digital Reseller App",
-        description:
-          "Sistem khusus bagi pengelola bisnis akun premium. Dilengkapi fitur loyalty card otomatis yang ter-update di setiap transaksi untuk tingkatkan retensi pembelian",
-        button: "Tanya Detail ",
       },
     ],
     gasBenefits: [
@@ -486,7 +489,7 @@ export const siteCopy = {
           eyebrow: "Logo",
           title: "Logo Design",
           description:
-            "Paket logo untuk bisnis baru maupun brand yang ingin terlihat lebih matang, lengkap dengan file akhir yang siap dipakai.",
+            "Pembuatan logo profesional untuk bisnis dan merek yang membutuhkan identitas visual yang kuat, mudah diingat, dan rapi, serta siap digunakan untuk keperluan komersial.",
           topic: "paket Logo Design",
           tiers: [
             {
@@ -525,7 +528,7 @@ export const siteCopy = {
           eyebrow: "Print & Promo",
           title: "Brosur / Poster",
           description:
-            "Paket desain promosi untuk brosur, poster, menu, campaign, dan materi presentasi bisnis yang siap dipakai online maupun cetak.",
+            "Desain promosi untuk menu, brosur, poster, kampanye, dan materi bisnis yang dirancang untuk menyampaikan informasi dengan jelas sekaligus mempertahankan tampilan yang profesional.",
           topic: "paket Brosur atau Poster",
           tiers: [
             {
@@ -565,9 +568,9 @@ export const siteCopy = {
         eyebrow: "Social Media Feeds",
         title: "Paket feed dibuat custom sesuai target konten.",
         description:
-          "Ceritakan jumlah posting, referensi akun, target campaign, dan kebutuhan caption. Digitra bantu susun arah visual, CTA copywriting, dan scope desain yang paling efisien sebelum produksi dimulai.",
+          "Desain feed Instagram dan media sosial khusus yang dibuat agar selaras dengan branding Anda, meningkatkan interaksi, dan menciptakan kehadiran bisnis anda di dunia digital terlihat lebih profesional.",
         topic: "paket feeds social media custom dengan CTA copywriting",
-        cta: "Chat Paket Feeds Custom",
+        cta: "Diskusikan kebutuhan feeds Anda",
         detailHref: "/services/socmed",
         detailLabel: "Lihat Detail Feeds",
         highlights: [
@@ -848,66 +851,72 @@ export const siteCopy = {
       landing: {
         label: "Landing Page",
         description:
-          "Best for promoting one product, running a campaign, validating the market, or building a sales page focused on one goal.",
+          "Perfect for promoting a single product, running ads, validating business ideas, or creating focused sales pages with strong conversion potential.",
       },
       company: {
         label: "Company Profile",
         description:
-          "Best for businesses that need a more complete profile with a professional page structure.",
+          "A professional business website built to strengthen brand identity, showcase services, portfolios, and help potential customers trust your business faster.",
       },
     },
     landingPackages: [
       {
         name: "Starter",
-        price: "Rp 450.000",
+        price: "$26",
         label: "Landing Page",
         features: [
-          "5-7 day delivery",
-          "2 minor revisions",
-          "1 major revision",
+          "Turnaround time: 3-6 days",
+          "4 minor revisions",
+          "2 major revision",
           "Up to 4 sections",
+          "Basic SEO",
           "Responsive design",
           "Copywriting not included",
           "Domain and hosting not included",
+          "Source code transfer via Github / ZIP",
+          "1-month maintenance"
         ],
       },
       {
         name: "Intermediate",
-        price: "Rp 1.050.000",
+        price: "$57",
         label: "Best Value",
         featured: true,
         features: [
-          "2-4 day delivery with VIP service",
-          "4 minor revisions",
+          "3-4 day delivery with VIP service",
+          "6 minor revisions",
           "2 major layout revisions",
-          "Up to 7 sections",
+          "Maximum 7 sections",
           "Copywriting included",
+          "Intermediate SEO",
           "Light animation",
           "Domain and hosting included (.com, .net, .online)",
-          "Optional source code via Github",
+          "Source code transfer via Github / ZIP",
+          "2-month maintenance"
         ],
       },
     ],
     companyProfilePackages: [
       {
         name: "Starter",
-        price: "Rp 750.000",
+        price: "$50",
         label: "Company Profile",
         features: [
           "For MSMEs and new businesses",
-          "7 day delivery",
+          "6 day delivery",
           "2 minor revisions",
           "1 major layout revision",
           "Up to 3 pages",
           "Client-provided text content",
+          "Basic SEO",
           "Responsive mobile and desktop",
-          "Source code via Github or ZIP",
+          "Source code transfer via Github / ZIP",
           "Domain and hosting not included",
         ],
       },
       {
         name: "Intermediate",
-        price: "Rp 1.350.000",
+        price: "$91",
         label: "Best Value",
         featured: true,
         features: [
@@ -918,8 +927,8 @@ export const siteCopy = {
           "Up to 5 pages",
           "Professional copywriting from bullet points",
           "Light animation and modern UI",
-          "Basic SEO for meta title and description",
-          "Source code via Github or ZIP",
+          "Professional SEO (Metadata & Technical)",
+          "Source code transfer via Github / ZIP",
           "Domain and hosting not included",
         ],
       },
@@ -936,7 +945,7 @@ export const siteCopy = {
         eyebrow: "01 / GAS",
         title: "GAS Web Business Application",
         description:
-          "Google Apps Script based systems for workflows, reports, dashboards, approvals, and recurring operational processes.",
+          "Digitra develops custom Google Apps Script (GAS) business systems to simplify daily operations, automate repetitive workflows, and centralize your business data into one efficient dashboard, everything is built to save time and reduce manual work.",
         learnMore: "Learn more",
         detail: {
           eyebrow: "GAS Automation Detail",
@@ -976,7 +985,7 @@ export const siteCopy = {
         eyebrow: "02 / Website",
         title: "Company Profile & Landing Page",
         description:
-          "Professional websites to introduce your business, explain your offer, and guide prospects toward purchase.",
+          "Professional websites designed to help businesses build credibility, explain their services clearly, and convert visitors into customers. Whether you need a focused landing page for campaigns or a complete company profile website, Digitra creates responsive and conversion-oriented web experiences tailored to your business goals.",
         learnMore: "Learn more",
         topic: "Company Profile and Landing Page package",
         detail: {
@@ -1017,7 +1026,7 @@ export const siteCopy = {
         eyebrow: "03 / Design",
         title: "Professional logo, brochure, and Instagram feed design.",
         description:
-          "Digitra helps businesses create logo designs, brochures, posters, and social media feeds that look consistent, professional, and ready for online or offline promotion.",
+          "Digitra provides visual design services to help businesses look more professional, consistent, and ready for both online and offline promotion. From logos and promotional materials to social media feeds — every design is created to strengthen your brand identity and attract customers visually.",
         detail: {
           title: "Visual design shaped around your brand needs and budget.",
           description:
@@ -1041,22 +1050,22 @@ export const siteCopy = {
     },
     gasExamples: [
       {
-        title: "Fashion Retail POS",
+        title: "Food Business Management App",
         description:
-          "Manage retail and wholesale (bulk) transactions and track the entire order cycle end-to-end—from processing to customer delivery—all in one smart dashboard.",
-        button: "Consult Now",
+          "A smart F&B business management system with real-time data synchronization, automatic COGS (HPP) calculations, inventory control, expense tracking, and integrated POS features — designed to help culinary businesses operate more efficiently while maintaining profitability and operational accuracy.",
+        button: "Ask for details",
       },
       {
-        title: "Digital Reseller App",
+        title: "Premium Account Reseller App",
         description:
-          "A specialized system for premium account business managers. Equipped with an automatic loyalty card feature that updates with every transaction to boost purchase retention",
-        button: "Consult Now",
+          "A management system for premium account rental and reseller businesses, equipped with customer tracking, automatic rental due-date reminders, transaction management, and dynamic loyalty features to increase repeat orders and customer retention.",
+        button: "Ask for details",
       },
       {
-        title: "F&B Business Management",
+        title: "Fashion & Wholesale POS App",
         description:
-          "A smart F&B POS system with real-time data synchronization. Enjoy the convenience of automatic cost of goods sold (COGS) calculations and accurate inventory tracking to ensure your business’s profitability",
-        button: "Consult Now",
+          "An integrated POS and order management system for fashion retail and wholesale businesses, featuring inventory management, transaction tracking, and internal order progress tracking for both admin and customers. helping businesses provide a more organized and professional ordering experience.",
+        button: "Ask for details",
       },
     ],
     gasBenefits: [
@@ -1168,7 +1177,7 @@ export const siteCopy = {
           eyebrow: "Logo",
           title: "Logo Design",
           description:
-            "Logo packages for new businesses or brands that need a more polished identity, complete with final files ready to use.",
+            "Professional logo creation for businesses and brands that need a strong, memorable, and polished visual identity ready for commercial use.",
           topic: "Logo Design package",
           tiers: [
             {
@@ -1207,7 +1216,7 @@ export const siteCopy = {
           eyebrow: "Print & Promo",
           title: "Brochure / Poster",
           description:
-            "Promotional design packages for brochures, posters, menus, campaigns, and business presentation assets ready for online or print use.",
+            "Promotional designs for menus, brochures, posters, campaigns, and business materials designed to communicate information clearly while maintaining a professional appearance.",
           topic: "Brochure or Poster package",
           tiers: [
             {
@@ -1242,9 +1251,9 @@ export const siteCopy = {
         eyebrow: "Social Media Feeds",
         title: "Custom feed packages built around your content goals.",
         description:
-          "Tell us your post volume, account references, campaign target, and caption needs. Digitra will shape the visual direction, CTA copywriting, and the most efficient design scope before production starts.",
+          "Instagram and social media feed designs tailored to align with your brand identity, boost engagement, and make your business’s digital presence look more professional.",
         topic: "custom social media feed package with CTA copywriting",
-        cta: "Chat Custom Feed Package",
+        cta: "Discuss your feed requirements Feed",
         detailHref: "/services/socmed",
         detailLabel: "See Feed Details",
         highlights: [

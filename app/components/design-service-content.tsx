@@ -63,7 +63,7 @@ export function DesignServiceContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-10 lg:px-10 lg:py-24">
+      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-10 lg:px-10 lg:py-16">
         <PageDecor tone="services" />
         <div className="relative mx-auto max-w-7xl">
           <Link

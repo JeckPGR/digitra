@@ -132,7 +132,7 @@ export default function Home() {
                 {home.hero.primaryCta}
               </Link>
               <Link
-                className="inline-flex h-12 items-center justify-center rounded-full border border-accent bg-card px-7 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-accent bg-card px-7 text-sm font-semibold text-accent! transition hover:bg-accent! hover:text-white! "
                 href="/services"
               >
                 {home.hero.secondaryCta}

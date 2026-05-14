@@ -31,7 +31,7 @@ export function ContactContent() {
                 {contactPage.hero.primaryCta}
               </WhatsAppCta>
               <a
-                className="inline-flex h-12 items-center justify-center rounded-full border border-accent bg-card px-7 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-accent bg-card px-7 text-sm font-semibold text-accent! transition hover:bg-accent! hover:text-white!"
                 href={`mailto:${siteConfig.email}`}
               >
                 {contactPage.hero.secondaryCta}
