@@ -768,7 +768,7 @@ export const siteCopy = {
       },
       heroStats: [
         { value: "1+", label: "Years Experience" },
-        { value: "5+", label: "Projects Delivered" },
+        { value: "12+", label: "Projects Delivered" },
         { value: "100%", label: "On-Time Delivery" },
         { value: "24/7", label: "VIP Support" },
       ],

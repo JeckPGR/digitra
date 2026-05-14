@@ -211,7 +211,7 @@ export function ServicesContent() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-5 pb-12 sm:px-8 sm:pb-14 lg:px-10 lg:py-24">
+      <section className="relative overflow-hidden px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-24">
         <PageDecor tone="contact" />
         <CtaPanel
           action={

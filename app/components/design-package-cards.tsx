@@ -1,6 +1,4 @@
 "use client";
-
-import Link from "next/link";
 import { whatsappLink } from "../lib/site";
 import { useLanguage } from "./language-provider";
 import { WhatsAppCta } from "./whatsapp-cta";
@@ -35,7 +33,7 @@ export function DesignPackageCards() {
 
               return (
                 <article
-                  className={`relative flex min-h-[360px] snap-start flex-col overflow-hidden rounded-lg border bg-card p-5 transition duration-300 hover:-translate-y-1 hover-shadow-card sm:p-6 ${
+                  className={`relative flex min-h-90 snap-start flex-col overflow-hidden rounded-lg border bg-card p-5 transition duration-300 hover:-translate-y-1 hover-shadow-card sm:p-6 ${
                     isFeatured
                       ? "border-accent shadow-accent"
                       : "border-border hover:border-accent"
